@@ -1,49 +1,68 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Md Afif Al Mamun",
+    "label": "Graduate Researcher",
     "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "email": "afif.mamun@ucalgary.ca",
+    "phone": "",
+    "url": "https://afif.me/",
+    "summary": "Just another guy good with computers.",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
-      "countryCode": "US",
-      "region": "California"
+      "address": "",
+      "postalCode": "",
+      "city": "Calgary",
+      "countryCode": "CA",
+      "region": "Alberta"
     },
     "profiles": [
       {
+        "network": "Github",
+        "username": "afifaniks",
+        "url": "https://github.com/afifaniks"
+      },
+      {
+        "network": "Google Scholar",
+        "username": "Md Afif Al Mamun",
+        "url": "https://scholar.google.com/citations?user=XuauQRIAAAAJ&hl=en"
+      },
+      {
+        "network": "ResearchGate",
+        "username": "Md Afif Al Mamun",
+        "url": "https://www.researchgate.net/profile/Md_Afif_Al_Mamun"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "afifaniks",
+        "url": "https://www.linkedin.com/in/afifaniks/"
+      },
+      {
         "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
+        "username": "afifaniks",
+        "url": "https://twitter.com/afifaniks"
       }
     ]
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity"]
+      "name": "University of Calgary",
+      "position": "Graduate Assistant - Research & Teaching",
+      "url": "https://www.ucalgary.ca/",
+      "startDate": "2023-09-01",
+      "endDate": "-",
+      "summary": "Working as a Graduate Assistant in the Department of Computer Science at the University of Calgary.",
+      "highlights": ["NLP, LLM, Software Engineering, AI Trustworthiness"]
+    },
+    {
+      "name": "Infolytx Bangladesh Limited",
+      "position": "Software Engineer II in AI/ML",
+      "url": "https://infolytx.com/",
+      "startDate": "2023-01-01",
+      "endDate": "2023-08-31",
+      "summary": "Worked as a Software Engineer II in the AI/ML team at Infolytx Bangladesh Limited.",
+      "highlights": ["NLP", "Computer Vision"]
     }
   ],
   "volunteer": [
-    {
-      "organization": "People's Climate March",
-      "location": "Zurich, Switzerland",
-      "position": "Lead Organizer",
-      "url": "https://example.com",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
-    }
   ],
   "education": [
     {
