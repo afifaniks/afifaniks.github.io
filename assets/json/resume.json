@@ -49,7 +49,7 @@
       "url": "https://www.ucalgary.ca/",
       "startDate": "2023-09-01",
       "endDate": "-",
-      "summary": "Working as a Graduate Assistant in the Department of Computer Science at the University of Calgary.",
+      "summary": "Working as a Graduate Assistant in the Department of Electrical & Software Engineering at the University of Calgary.",
       "highlights": ["NLP, LLM, Software Engineering, AI Trustworthiness"]
     },
     {
@@ -60,6 +60,33 @@
       "endDate": "2023-08-31",
       "summary": "Worked as a Software Engineer II in the AI/ML team at Infolytx Bangladesh Limited.",
       "highlights": ["NLP", "Computer Vision"]
+    },
+    {
+      "name": "Infolytx Bangladesh Ltd.",
+      "position": "Software Engineer I in AI/ML",
+      "url": "https://infolytx.com",
+      "startDate": "2022-01-01",
+      "endDate": "2022-12-31",
+      "summary": "Worked as a Software Engineer I in the AI/ML team at Infolytx Bangladesh Limited.",
+      "highlights": ["NLP", "Computer Vision"]
+    },
+    {
+      "name": "Infolytx Bangladesh Ltd.",
+      "position": "Jr. Software Engineer in AI/ML",
+      "url": "https://infolytx.com",
+      "startDate": "2021-07-01",
+      "endDate": "2021-12-31",
+      "summary": "Worked as a Jr. Software Engineer in the AI/ML team at Infolytx Bangladesh Limited.",
+      "highlights": ["NLP", "Computer Vision"]
+    },
+    {
+      "name": "ServicEngine Ltd.",
+      "position": "Software Engineer",
+      "url": "https://sebpo.com",
+      "startDate": "2020-07-01",
+      "endDate": "2021-06-30",
+      "summary": "Worked as a Software Engineer at ServicEngine Ltd.",
+      "highlights": ["Software Development", "Client Interaction"]
     }
   ],
   "volunteer": [],
@@ -69,7 +96,7 @@
       "location": "Calgary, Alberta, Canada",
       "url": "https://www.ucalgary.ca/",
       "area": "Software Engineering",
-      "studyType": "MSc",
+      "studyType": "Master of Science",
       "startDate": "2023-09-01",
       "endDate": "Present",
       "score": "",
@@ -80,7 +107,7 @@
       "location": "Dhaka, Bangladesh",
       "url": "http://diu.edu.bd",
       "area": "Computer Science and Engineering",
-      "studyType": "BSc",
+      "studyType": "Bachelor of Science",
       "startDate": "2016-05-01",
       "endDate": "2020-08-08",
       "score": "",
@@ -335,17 +362,40 @@
   ],
   "skills": [
     {
-      "name": "Physics",
-      "level": "Master",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
+      "name": "Software Engineering",
+      "level": "Expert",
+      "icon": "fa-solid fa-code",
+      "keywords": []
+    },
+    {
+      "name": "Large Language Models",
+      "level": "Expert",
+      "icon": "fa-solid fa-brain",
+      "keywords": []
+    },
+    {
+      "name": "Natural Language Processing",
+      "level": "Expert",
+      "icon": "fa-solid fa-language",
+      "keywords": []
+    },
+    {
+      "name": "Computer Vision",
+      "level": "Intermediate",
+      "icon": "fa-solid fa-eye",
+      "keywords": []
+    },
+    {
+      "name": "Amazon Web Services",
+      "level": "Intermediate",
+      "icon": "fa-solid fa-cloud",
+      "keywords": []
+    },
+    {
+      "name": "CI/CD",
+      "level": "Beginner",
+      "icon": "fa-solid fa-sync",
+      "keywords": []
     }
   ],
   "languages": [
