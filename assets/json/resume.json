@@ -310,25 +310,27 @@
   ],
   "publications": [
     {
-      "name": "Zur Elektrody/namik bewegter Körper",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-06-30",
-      "url": "https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies",
-      "summary": "It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source."
+      "name": "TLNet:  A Deep CNN model for Prediction of Tomato Leaf Diseases",
+      "publisher": "ICCIT 2020 (IEEE)",
+      "releaseDate": "2020",
+      "url": "https://ieeexplore.ieee.org/abstract/document/9392664",
+      "doi": "10.1109/ICCIT51783.2020.9392664",
+      "summary": ""
     },
     {
-      "name": "Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-03-18",
-      "url": "https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt",
-      "summary": "In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921."
+      "name": "an-Eye: Safe Navigation in Footpath for Visually Impaired using Computer Vision Techniques",
+      "publisher": "Daffodil International University",
+      "releaseDate": "2020",
+      "url": "http://dspace.daffodilvarsity.edu.bd:8080/handle/123456789/5116",
+      "summary": ""
     },
     {
-      "name": "Die Grundlage der allgemeinen Relativitätstheorie",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1916-03-20",
-      "url": "https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie",
-      "summary": "The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914)."
+      "name": "Bangla Music Genre Classification Using Neural Network",
+      "publisher": "SMART 2019 (IEEE)",
+      "releaseDate": "2019",
+      "url": "https://ieeexplore.ieee.org/document/9117400/",
+      "doi": "10.1109/SMART46866.2019.9117400",
+      "summary": ""
     }
   ],
   "skills": [
@@ -348,7 +350,7 @@
   ],
   "languages": [
     {
-      "language": "German",
+      "language": "Bengali",
       "fluency": "Native speaker",
       "icon": ""
     },
@@ -358,33 +360,65 @@
       "icon": ""
     }
   ],
-  "interests": [
+  "interests": [],
+  "references": [],
+  "projects": [
     {
-      "name": "Physics",
-      "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
+      "name": "Intelligent Issue Analytics Assistant for IBM Runtime Systems",
+      "summary": "",
+      "highlights": ["DeBERTa", "RoBERTa", "Pytorch", "Transformers"],
+      "startDate": "",
+      "endDate": "",
+      "url": "https://casweb.59b0587b.public.multi-containers.ibm.com/ibm/cas/canada/research/1155"
     },
     {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
-    }
-  ],
-  "projects": [
+      "name": "Bangla Music Genre Classifier",
+      "summary": "",
+      "highlights": ["Tensorflow", "Keras", "Python"],
+      "startDate": "",
+      "endDate": "",
+      "url": "https://github.com/afifaniks/BanglaMusicGenreClassification"
+    },
+    {
+      "name": "TextMiner - Text Analytics Framework",
+      "summary": "",
+      "highlights": ["FastAPI", "PyTorch", "Amazon Textract", "spaCy"],
+      "startDate": "",
+      "endDate": "",
+      "url": "https://www.infolytx.com/ai-accelerators/"
+    },
+    {
+      "name": "BestFit - Candidate Screening System",
+      "summary": "",
+      "highlights": ["Spring Boot", "spaCy", "NLTK"],
+      "startDate": "",
+      "endDate": "",
+      "url": "https://www.infolytx.com/products/bestfit-ai-solution/"
+    },
+    {
+      "name": "Shadhin - Fintech Accelerator",
+      "summary": "",
+      "highlights": ["FastAPI", "PyTorch", "spaCy"],
+      "startDate": "",
+      "endDate": "",
+      "url": "https://www.infolytx.com/case-study/case-study-fintech/"
+    },
+    {
+      "name": "anEye - Undergrad Thesis Project",
+      "summary": "",
+      "highlights": ["Tensorflow", "Keras", "OpenCV", "Python"],
+      "startDate": "",
+      "endDate": "",
+      "url": "https://sites.google.com/view/a-Eye"
+    },
+    {
+      "name": "Inventory Management System",
+      "summary": "",
+      "highlights": ["JavaFX", "MySQL"],
+      "startDate": "",
+      "endDate": "",
+      "url": "https://github.com/afifaniks/InventorySystem"
+    },
     {
       "name": "Quantum Computing",
       "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
