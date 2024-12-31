@@ -9,12 +9,12 @@ last_name: Mamun
 contact_note: >
   Email is the best way to reach me. :)
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Welcome to my personal website where I share my projects, blog posts, and more. Stay tuned for updates!
+  Exploring the fusion of Large Language Models and Software Engineering. Turning ideas into impactful AI-driven solutions, one line of code at a time.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
 keywords: Afif, software-engineer, graduate-researcher, portfolio-website # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: ❒ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: fav.png # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://afifaniks.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
