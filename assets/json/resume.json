@@ -367,65 +367,65 @@
       "name": "Intelligent Issue Analytics Assistant for IBM Runtime Systems",
       "summary": "",
       "highlights": ["DeBERTa", "RoBERTa", "Pytorch", "Transformers"],
-      "startDate": "",
+      "startDate": "2023-09-01",
       "endDate": "",
       "url": "https://casweb.59b0587b.public.multi-containers.ibm.com/ibm/cas/canada/research/1155"
     },
     {
-      "name": "Bangla Music Genre Classifier",
+      "name": "OptiLine™ - Assembly Line Stoppage Solution",
       "summary": "",
-      "highlights": ["Tensorflow", "Keras", "Python"],
-      "startDate": "",
-      "endDate": "",
-      "url": "https://github.com/afifaniks/BanglaMusicGenreClassification"
+      "highlights": ["PyTorch", "FastAPI", "spaCy"],
+      "startDate": "2023-01",
+      "endDate": "2023-07",
+      "url": "https://www.infolytx.com/case-study/optiline/?portfolioCats=203#"
     },
     {
       "name": "TextMiner - Text Analytics Framework",
       "summary": "",
       "highlights": ["FastAPI", "PyTorch", "Amazon Textract", "spaCy"],
-      "startDate": "",
-      "endDate": "",
+      "startDate": "2022-01",
+      "endDate": "2022-06",
       "url": "https://www.infolytx.com/ai-accelerators/"
     },
     {
       "name": "BestFit - Candidate Screening System",
       "summary": "",
       "highlights": ["Spring Boot", "spaCy", "NLTK"],
-      "startDate": "",
-      "endDate": "",
+      "startDate": "2022-06",
+      "endDate": "2022-09",
       "url": "https://www.infolytx.com/products/bestfit-ai-solution/"
     },
     {
       "name": "Shadhin - Fintech Accelerator",
       "summary": "",
       "highlights": ["FastAPI", "PyTorch", "spaCy"],
-      "startDate": "",
-      "endDate": "",
+      "startDate": "2021-09",
+      "endDate": "2021-12",
       "url": "https://www.infolytx.com/case-study/case-study-fintech/"
     },
     {
       "name": "anEye - Undergrad Thesis Project",
       "summary": "",
       "highlights": ["Tensorflow", "Keras", "OpenCV", "Python"],
-      "startDate": "",
-      "endDate": "",
+      "startDate": "2018",
+      "endDate": "2020",
       "url": "https://sites.google.com/view/a-Eye"
+    },
+    {
+      "name": "Bangla Music Genre Classifier",
+      "summary": "",
+      "highlights": ["Tensorflow", "Keras", "Python"],
+      "startDate": "2019",
+      "endDate": "2019",
+      "url": "https://github.com/afifaniks/BanglaMusicGenreClassification"
     },
     {
       "name": "Inventory Management System",
       "summary": "",
       "highlights": ["JavaFX", "MySQL"],
-      "startDate": "",
-      "endDate": "",
+      "startDate": "2018",
+      "endDate": "2018",
       "url": "https://github.com/afifaniks/InventorySystem"
-    },
-    {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01",
-      "url": "https://example.com"
     }
   ]
 }
