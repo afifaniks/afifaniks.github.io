@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Md Afif Al Mamun",
-    "label": "Graduate Researcher",
+    "title": "Graduate Researcher",
     "image": "",
     "email": "afif.mamun@ucalgary.ca",
     "phone": "",
-    "url": "https://afif.me/",
-    "summary": "Just another guy good with computers.",
+    "Homepage": "https://afif.me/",
+    "summary": "",
     "location": {
       "address": "",
       "postalCode": "",
@@ -93,7 +93,7 @@
   "education": [
     {
       "institution": "University of Calgary",
-      "location": "Calgary, Alberta, Canada",
+      "location": "Calgary, Alberta",
       "url": "https://www.ucalgary.ca/",
       "area": "Software Engineering",
       "studyType": "Master of Science",
@@ -117,14 +117,14 @@
   "awards": [
     {
       "title": "IBM CAS Project of the Year Award",
-      "date": "2024-10-01",
+      "date": "2024-10-24",
       "awarder": "IBM",
       "url": "",
       "summary": ""
     },
     {
       "title": "Alberta Graduate Excellence Scholarship (AGES)",
-      "date": "2024-06-01",
+      "date": "2024-06-26",
       "awarder": "University of Calgary",
       "url": "",
       "summary": ""
@@ -147,13 +147,6 @@
       "title": "Professor Dr. M. Lutfar Rahman Scholarship",
       "date": "2017-01-01",
       "awarder": "Daffodil International University",
-      "url": "",
-      "summary": ""
-    },
-    {
-      "title": "Education Board Scholarship",
-      "date": "2012-01-01",
-      "awarder": "Dhaka Education Board",
       "url": "",
       "summary": ""
     }
