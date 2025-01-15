@@ -90,7 +90,7 @@ ninja.data = [{
           title: 'Our paper titled Hallucination Detection in Large Language Models with Metamorphic Relations has...',
           description: "",
           section: "News",handler: () => {
-              window.location.href = "/news/fse/";
+              window.location.href = "/news/fse25-hallucination/";
             },},{id: "projects-project-1",
           title: 'project 1',
           description: "with background image",
