@@ -86,6 +86,11 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/cascon24/";
+            },},{id: "news-our-paper-titled-hallucination-detection-in-large-language-models-with-metamorphic-relations-has-been-accepted-to-fse-2025",
+          title: 'Our paper titled Hallucination Detection in Large Language Models with Metamorphic Relations has...',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/fse/";
             },},{id: "projects-project-1",
           title: 'project 1',
           description: "with background image",
