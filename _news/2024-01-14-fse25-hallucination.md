@@ -8,7 +8,7 @@ related_posts: false
 
 ## Paper Title: Hallucination Detection in Large Language Models with Metamorphic Relations
 
-#### Authors: Borui Yang, [Md Afif Al Mamun](https://afif.me), [Jie Zhang](https://sites.google.com/view/jie-zhang/home), [Gias Uddin](https://giasuddin.ca/)
+Authors: Borui Yang, [Md Afif Al Mamun](https://afif.me), [Jie Zhang](https://sites.google.com/view/jie-zhang/home), [Gias Uddin](https://giasuddin.ca/)
 
 ## Abstract
 
