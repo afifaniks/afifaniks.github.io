@@ -53,6 +53,15 @@
       "highlights": ["NLP, LLM, Software Engineering, AI Trustworthiness"]
     },
     {
+      "name": "IBM Canada",
+      "position": "Intern",
+      "url": "https://ibm.com/",
+      "startDate": "2025-01-01",
+      "endDate": "-",
+      "summary": "Working as an intern at IBM Canada with Eclipse Openj9 team. My work involves developing AI-powered solutions to assist developers in bug triaging and automated bug deduplication.",
+      "highlights": ["LLM", "Bug Triaging", "Automated Bug Deduplication"]
+    },
+    {
       "name": "Infolytx Bangladesh Limited",
       "position": "Software Engineer II in AI/ML",
       "url": "https://infolytx.com/",
