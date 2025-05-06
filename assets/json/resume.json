@@ -125,6 +125,13 @@
   ],
   "awards": [
     {
+      "title": "ACM Distinguished Paper Award",
+      "date": "2025-05-01",
+      "awarder": "FSE 2025",
+      "url": "",
+      "summary": "Awarded this for our paper titled Hallucination Detection in Large Language Models with Metamorphic Relations."
+    },
+    {
       "title": "IBM CAS Project of the Year Award",
       "date": "2024-10-24",
       "awarder": "IBM",
