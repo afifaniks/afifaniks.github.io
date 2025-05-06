@@ -78,9 +78,6 @@ ninja.data = [{
             },},{id: "news-i-have-been-awarded-alberta-graduate-excellence-scholarship-2024",
           title: 'I have been awarded Alberta Graduate Excellence Scholarship 2024!',
           description: "",
-          section: "News",},{id: "news-our-paper-hallucination-detection-in-large-language-models-with-metamorphic-relations-was-awarded-acm-distinguished-paper-award-at-fse-2025",
-          title: 'Our paper Hallucination Detection in Large Language Models with Metamorphic Relations was awarded...',
-          description: "",
           section: "News",},{id: "news-excited-to-share-that-our-project-intelligent-issue-analytics-assistant-for-ibm-runtime-systems-has-been-awarded-the-ibm-cas-project-of-the-year-2024",
           title: 'Excited to share that our project Intelligent Issue Analytics Assistant for IBM Runtime...',
           description: "",
@@ -94,7 +91,10 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/fse25-hallucination/";
-            },},{id: "projects-project-1",
+            },},{id: "news-our-paper-hallucination-detection-in-large-language-models-with-metamorphic-relations-was-awarded-acm-distinguished-paper-award-at-fse-2025",
+          title: 'Our paper Hallucination Detection in Large Language Models with Metamorphic Relations was awarded...',
+          description: "",
+          section: "News",},{id: "projects-project-1",
           title: 'project 1',
           description: "with background image",
           section: "Projects",handler: () => {
