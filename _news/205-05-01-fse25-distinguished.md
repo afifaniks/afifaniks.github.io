@@ -7,13 +7,14 @@ related_posts: false
 
 Our paper <b>Hallucination Detection in Large Language Models with Metamorphic Relations</b> was awarded ACM Distinguished Paper Award at FSE 2025!
 
-
 ---
+
 layout: post
 title: Our paper titled <b>Hallucination Detection in Large Language Models with Metamorphic Relations</b> has been accepted to FSE 2025.
 date: 2025-01-14
 inline: false
 related_posts: false
+
 ---
 
 ## Paper Title: Hallucination Detection in Large Language Models with Metamorphic Relations
