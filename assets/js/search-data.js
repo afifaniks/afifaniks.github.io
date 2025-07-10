@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/timeline/";
           },
-        },{id: "post-debugging-python-programs-on-remote-servers-computing-clusters",
+        },{id: "post-running-ollama-with-apptainer-a-guide-to-local-llms-with-gpu-support-on-hpc-clusters",
+      
+        title: 'Running Ollama with Apptainer: A Guide to Local LLMs with GPU Support on... <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.open("https://medium.com/@afifaniks/running-ollama-with-apptainer-a-step-by-step-guide-to-local-llms-with-gpu-support-on-hpc-3fe98c8af2c8?source=rss-79598b9b2199------2", "_blank");
+        
+      },
+    },{id: "post-debugging-python-programs-on-remote-servers-computing-clusters",
       
         title: 'Debugging Python Programs on Remote Servers/Computing Clusters <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
       
@@ -93,6 +104,9 @@ ninja.data = [{
               window.location.href = "/news/fse25-hallucination/";
             },},{id: "news-our-paper-hallucination-detection-in-large-language-models-with-metamorphic-relations-was-awarded-acm-distinguished-paper-award-at-fse-2025",
           title: 'Our paper Hallucination Detection in Large Language Models with Metamorphic Relations was awarded...',
+          description: "",
+          section: "News",},{id: "news-i-have-been-awarded-alberta-graduate-excellence-scholarship-2025-for-the-second-time",
+          title: 'I have been awarded Alberta Graduate Excellence Scholarship 2025 for the second time!...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
