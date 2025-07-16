@@ -108,7 +108,12 @@ ninja.data = [{
           section: "News",},{id: "news-i-have-been-awarded-alberta-graduate-excellence-scholarship-2025-for-the-second-time",
           title: 'I have been awarded Alberta Graduate Excellence Scholarship 2025 for the second time!...',
           description: "",
-          section: "News",},{id: "projects-project-1",
+          section: "News",},{id: "news-our-paper-evaluating-deep-learning-based-domain-generalization-for-motion-mitigation-in-multi-center-brain-mri-has-been-accepted-to-miccai-rime-2025-workshop",
+          title: 'Our paper Evaluating Deep Learning Based Domain Generalization for Motion Mitigation in Multi-Center...',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/rime/";
+            },},{id: "projects-project-1",
           title: 'project 1',
           description: "with background image",
           section: "Projects",handler: () => {
