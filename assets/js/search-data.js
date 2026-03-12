@@ -113,6 +113,11 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/rime/";
+            },},{id: "news-our-paper-evaluating-the-environmental-impact-of-using-small-language-models-and-prompt-engineering-for-code-generation-has-been-accepted-to-ease-2026",
+          title: 'Our paper Evaluating the Environmental Impact of using Small Language Models and Prompt...',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/sustainable-llms/";
             },},{id: "projects-project-1",
           title: 'project 1',
           description: "with background image",
