@@ -21,4 +21,4 @@ My research focuses on Large Language Models for Software Engineering, with a pa
 
 Before starting my PhD, I worked for several years as a Software Engineer specializing in AI, contributing to projects across different applied domains. I hold a Bachelor of Science degree in Computer Science, for which I was awarded a gold medal in recognition of academic excellence.
 
-Outside of my work, I enjoy enjoy the fine art of <em>doing nothing</em> and have a long-standing engineer’s dream of eventually retiring to a quiet village and starting a farm. :)
+Outside of my work, I enjoy the fine art of <em>doing nothing</em> and have a long-standing engineer’s dream of eventually retiring to a quiet village and starting a farm. :)
