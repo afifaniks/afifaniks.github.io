@@ -45,6 +45,15 @@
   "work": [
     {
       "name": "University of Calgary",
+      "position": "Sessional Instructor",
+      "url": "https://www.ucalgary.ca/",
+      "startDate": "2026-01-01",
+      "endDate": "2026-04-30",
+      "summary": "Co-instructing ENSF 380 in Winter 2026 alongside Dr. Ann Barcomb.",
+      "highlights": ["Software Engineering", "Object Oriented Programming", "Database Management Systems"]
+    },
+    {
+      "name": "University of Calgary",
       "position": "Graduate Assistant - Research & Teaching",
       "url": "https://www.ucalgary.ca/",
       "startDate": "2023-09-01",
