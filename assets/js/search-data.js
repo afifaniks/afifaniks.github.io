@@ -118,6 +118,11 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/sustainable-llms/";
+            },},{id: "news-",
+          title: '',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/2026-04-16-triagerx/";
             },},{id: "projects-project-1",
           title: 'project 1',
           description: "with background image",
