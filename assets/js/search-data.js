@@ -118,11 +118,11 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/sustainable-llms/";
-            },},{id: "news-",
-          title: '',
+            },},{id: "news-our-paper-triagerx-dual-transformers-for-bug-triaging-tasks-with-content-and-interaction-based-rankings-has-been-accepted-to-ieee-transactions-on-software-engineering-tse",
+          title: 'Our paper TriagerX: Dual Transformers for Bug Triaging Tasks with Content and Interaction...',
           description: "",
           section: "News",handler: () => {
-              window.location.href = "/news/2026-04-16-triagerx/";
+              window.location.href = "/news/triagerx/";
             },},{id: "projects-project-1",
           title: 'project 1',
           description: "with background image",
