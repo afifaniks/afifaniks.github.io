@@ -37,9 +37,9 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/timeline/";
           },
-        },{id: "post-প্রেম-আর-হাহাকার",
+        },{id: "post-প্রেমাকার",
       
-        title: "প্রেম আর হাহাকার",
+        title: "প্রেমাকার",
       
       description: "প্রেম, হাহাকার এবং কয়েকটি লাইন",
       section: "Posts",
