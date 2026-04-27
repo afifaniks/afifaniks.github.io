@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&display=swap');
+
+.poem-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 5rem 1.5rem 7rem;
+}
+
+.poem {
+  max-width: 560px;
+  width: 100%;
+  position: relative;
+
+  font-family: "Tiro Bangla", serif;
+  font-size: 1.32rem;
+  line-height: 2.65;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: rgba(255, 246, 228, 0.84);
+  text-rendering: optimizeLegibility;
+
+  padding: 2rem 0 2rem 2.8rem;
+  text-shadow: 0 1px 20px rgba(255, 195, 90, 0.07);
+}
+
+/* Warm amber vertical accent line */
+.poem::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(210, 158, 65, 0.45) 14%,
+    rgba(210, 158, 65, 0.45) 82%,
+    transparent
+  );
+}
+
+/* Fading top rule aligned with text */
+.poem::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 2.8rem;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    rgba(210, 158, 65, 0.28),
+    transparent 55%
+  );
+}
+
+.poem .stanza {
+  margin: 0 0 2.5rem;
+}
+
+.poem .stanza:last-child {
+  margin-bottom: 0;
+}
+
+.poem blockquote {
+  margin: 0 0 2.4rem;
+  padding: 0;
+  border: none;
+  background: none;
+  font-style: normal;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.poem blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.poem .final-line {
+  margin-top: 3.5rem;
+  padding-top: 1.5rem;
+  text-align: right;
+  opacity: 0.38;
+  font-size: 0.78em;
+  letter-spacing: 0.15em;
+  border-top: 1px solid rgba(210, 158, 65, 0.18);
+}
+
+@media (max-width: 768px) {
+  .poem-wrapper {
+    padding: 3rem 1rem 5rem;
+  }
+
+  .poem {
+    font-size: 1.15rem;
+    line-height: 2.35;
+    padding-left: 1.8rem;
+    padding-right: 0;
+  }
+}
