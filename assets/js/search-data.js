@@ -134,6 +134,14 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/triagerx/";
+            },},{id: "news-i-will-be-serving-as-a-web-co-chair-for-icsme-2027-which-will-be-hosted-at-york-university-in-ontario-canada",
+          title: 'I will be serving as a Web Co-Chair for ICSME 2027, which will...',
+          description: "",
+          section: "News",},{id: "news-our-work-blagent-was-presented-as-a-power-pitch-at-ese-research-days-2026-university-of-calgary",
+          title: 'Our work BLAgent was presented as a Power Pitch at ESE Research Days...',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/blagent-ese-research/";
             },},{id: "projects-project-1",
           title: 'project 1',
           description: "with background image",
