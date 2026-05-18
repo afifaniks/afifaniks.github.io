@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/timeline/";
           },
-        },{id: "post-প্রেমাকার",
+        },{id: "post-she",
+      
+        title: "She",
+      
+      description: "A quiet wondering in the dark",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2026/she/";
+        
+      },
+    },{id: "post-প্রেমাকার",
       
         title: "প্রেমাকার",
       
