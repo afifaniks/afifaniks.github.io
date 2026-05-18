@@ -7,3 +7,15 @@
 
 "Vision":
   color: "#009f36"
+
+"Journal":
+  color: "#2196F3"
+
+"Conference":
+  color: "#4CAF50"
+
+"Poster":
+  color: "#FF9800"
+
+"Thesis":
+  color: "#9C27B0"

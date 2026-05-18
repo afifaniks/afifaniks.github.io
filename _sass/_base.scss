@@ -739,6 +739,7 @@ footer.sticky-bottom {
           display: inline-block;
           background-color: var(--global-theme-color);
           margin-bottom: 0.5rem;
+          color: white;
 
           a {
             color: white;
@@ -746,6 +747,10 @@ footer.sticky-bottom {
             &:hover {
               text-decoration: none;
             }
+          }
+
+          div {
+            color: white;
           }
         }
 
