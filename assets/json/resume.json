@@ -190,6 +190,20 @@
       "summary": ""
     }
   ],
+  "services": [
+    {
+      "role": "Reviewer",
+      "organization": "ACM Transactions on Software Engineering and Methodology (TOSEM)",
+      "url": "https://dl.acm.org/journal/tosem",
+      "summary": "Peer reviewer for the journal."
+    },
+    {
+      "role": "Reviewer",
+      "organization": "Empirical Software Engineering (EMSE)",
+      "url": "https://link.springer.com/journal/10664",
+      "summary": "Peer reviewer for the journal."
+    }
+  ],
   "certificates": [
     {
       "name": "Developing CRUD Application using FastAPI, Python & MongoDB",
@@ -365,31 +379,6 @@
       "issuer": "Coursera",
       "url": "https://www.coursera.org/account/accomplishments/certificate/DWU9YKJGD3RY",
       "icon": "fa-solid fa-certificate"
-    }
-  ],
-  "publications": [
-    {
-      "name": "TLNet:  A Deep CNN model for Prediction of Tomato Leaf Diseases",
-      "publisher": "ICCIT 2020 (IEEE)",
-      "releaseDate": "2020",
-      "url": "https://ieeexplore.ieee.org/abstract/document/9392664",
-      "doi": "10.1109/ICCIT51783.2020.9392664",
-      "summary": ""
-    },
-    {
-      "name": "an-Eye: Safe Navigation in Footpath for Visually Impaired using Computer Vision Techniques",
-      "publisher": "Daffodil International University",
-      "releaseDate": "2020",
-      "url": "http://dspace.daffodilvarsity.edu.bd:8080/handle/123456789/5116",
-      "summary": ""
-    },
-    {
-      "name": "Bangla Music Genre Classification Using Neural Network",
-      "publisher": "SMART 2019 (IEEE)",
-      "releaseDate": "2019",
-      "url": "https://ieeexplore.ieee.org/document/9117400/",
-      "doi": "10.1109/SMART46866.2019.9117400",
-      "summary": ""
     }
   ],
   "skills": [

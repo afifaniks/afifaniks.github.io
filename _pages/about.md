@@ -17,7 +17,7 @@ social: true # includes social icons at the bottom of the page
 
 I am Afif, a PhD student at the <a href='https://ucalgary.ca'>University of Calgary</a>, supervised by <a href='https://giasuddin.ca/'>Dr. Gias Uddin</a> and <a href='https://barcomb.org/'>Dr. Ann Barcomb</a>. I also serve as a Graduate Assistant in Research & Teaching at UCalgary. In parallel with my doctoral studies, I am a Mitacs Accelerate intern at <a href='https://ibm.com'>IBM Canada</a>.
 
-My research focuses on Large Language Models for Software Engineering, with a particular emphasis on automated bug management, including bug triaging, localization, and root cause analysis. I am especially interested in building LLM-based agentic and retrieval-augmented systems that can reason over complex software artifacts and assist developers throughout the debugging lifecycle.
+My research focuses on Large Language Models for Software Engineering, with a particular emphasis on automated bug management, including bug triaging, localization, and root cause analysis. I am especially interested in building LLM-based agentic and retrieval-augmented systems that can reason over complex software artifacts and assist developers throughout the debugging lifecycle. I also contribute to the research community through peer-review activities for software engineering journals, including TOSEM and EMSE.
 
 Before starting my PhD, I worked for several years as a Software Engineer specializing in AI, contributing to projects across different applied domains. I hold a Bachelor of Science degree in Computer Science, for which I was awarded a gold medal in recognition of academic excellence.
 
