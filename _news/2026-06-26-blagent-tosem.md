@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "BLAgent: Agentic RAG for File-Level Bug Localization has been accepted to ACM Transactions on Software Engineering and Methodology (TOSEM)."
+title: "BLAgent: Agentic RAG for File-Level Bug Localization — Accepted to the ACM Transactions on Software Engineering and Methodology (TOSEM) Special Issue on Agentic AI"
 date: 2026-06-26
 inline: false
 related_posts: false
