@@ -153,6 +153,11 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/blagent-ese-research/";
+            },},{id: "news-blagent-agentic-rag-for-file-level-bug-localization-has-been-accepted-to-acm-transactions-on-software-engineering-and-methodology-tosem",
+          title: 'BLAgent: Agentic RAG for File-Level Bug Localization has been accepted to ACM Transactions...',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/blagent-tosem/";
             },},{id: "projects-project-1",
           title: 'project 1',
           description: "with background image",
