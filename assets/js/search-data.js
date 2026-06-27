@@ -218,11 +218,11 @@ ninja.data = [{
           window.open("https://github.com/afifaniks", "_blank");
         },
       },{
-        id: 'social-kaggle',
-        title: 'Kaggle',
+        id: 'social-lastfm',
+        title: 'Last FM',
         section: 'Socials',
         handler: () => {
-          window.open("https://www.kaggle.com/afifaniks", "_blank");
+          window.open("https://www.last.fm/user/afifaniks", "_blank");
         },
       },{
         id: 'social-linkedin',
@@ -251,13 +251,6 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://scholar.google.com/citations?user=XuauQRIAAAAJ", "_blank");
-        },
-      },{
-        id: 'social-x',
-        title: 'X',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://twitter.com/afifaniks", "_blank");
         },
       },{
       id: 'light-theme',
