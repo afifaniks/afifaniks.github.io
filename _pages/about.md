@@ -15,10 +15,8 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I am Afif, a PhD student at the <a href='https://ucalgary.ca'>University of Calgary</a>, supervised by <a href='https://giasuddin.ca/'>Dr. Gias Uddin</a> and <a href='https://barcomb.org/'>Dr. Ann Barcomb</a>. I also serve as a Graduate Assistant in Research & Teaching at UCalgary. In parallel with my doctoral studies, I am a Mitacs Accelerate intern at <a href='https://ibm.com'>IBM Canada</a>.
+I'm Afif, a PhD student at the University of Calgary researching how AI agents can become better teammates for developers by helping them find, understand, and fix software bugs.
 
-My research focuses on Large Language Models for Software Engineering, with a particular emphasis on automated bug management, including bug triaging, localization, and root cause analysis. I am especially interested in building LLM-based agentic and retrieval-augmented systems that can reason over complex software artifacts and assist developers throughout the debugging lifecycle. I also contribute to the research community through peer-review activities for software engineering journals, including TOSEM and EMSE.
+My work focuses on automating software bug management, spanning bug triaging, localization, and root cause analysis through intelligent LLM-based agents. Alongside my research, I collaborate with IBM Canada through Mitacs and contribute to the software engineering community through peer review for journals including TOSEM and EMSE.
 
-Before starting my PhD, I worked for several years as a Software Engineer specializing in AI, contributing to projects across different applied domains. I hold a Bachelor of Science degree in Computer Science, for which I was awarded a gold medal in recognition of academic excellence.
-
-Outside of my work, I enjoy the fine art of <em>doing nothing</em> and have a long-standing engineer’s dream of eventually retiring to a quiet village and starting a farm. :)
+Before my PhD, I built AI systems as a Software Engineer. When I'm away from the keyboard, I enjoy the fine art of doing absolutely nothing, and occasionally imagining life on a farm where the only bugs are biological. :)
