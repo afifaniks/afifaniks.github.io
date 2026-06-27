@@ -1,4 +1,558 @@
-@import url('https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&display=swap');
+/*******************************************************************************
+ * Custom theme refresh — layered on top of al-folio.
+ *
+ * Everything here is additive / override-only (this file is imported last in
+ * main.scss), so no al-folio template or behaviour is touched.
+ *
+ * Direction: cool "signal indigo" primary paired with a warm "trace amber"
+ * highlight, a geometric display face (Space Grotesk) for headings and a
+ * monospace utility face (JetBrains Mono) for the subject's own vernacular —
+ * code, traces, debugging. Body stays a clean, readable Inter.
+ ******************************************************************************/
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Caveat:wght@500;600;700&family=Tiro+Bangla:ital@0;1&display=swap");
+
+/* ---- Design tokens -------------------------------------------------------- */
+
+$display-font: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+$body-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+$mono-font: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+
+// Light — muted clay brown (warm, readable as a link colour on paper)
+$accent-light: #9a6a47;
+$accent-light-hover: #7c5236;
+
+// Dark — warm tan
+$accent-dark: #cda47e;
+$accent-dark-hover: #ddbb99;
+
+/* ---- Map onto al-folio's CSS variables ------------------------------------ */
+
+:root {
+  --display-font: #{$display-font};
+  --mono-font: #{$mono-font};
+
+  --accent: #{$accent-light};
+  --accent-hover: #{$accent-light-hover};
+
+  // Override al-folio globals so every component follows the new palette.
+  // One hue for everything interactive; hover keeps the same hue (feedback
+  // comes from the underline / lift, not a colour shift) → consistent.
+  --global-theme-color: var(--accent);
+  --global-hover-color: var(--accent);
+  --global-bg-color: #fefdfa; // warm paper / beige, very light
+  --global-divider-color: rgba(74, 55, 38, 0.10);
+  --global-card-bg-color: #ffffff;
+  --navbar-bg: rgba(254, 253, 250, 0.72);
+  --card-shadow: 0 1px 2px rgba(74, 55, 38, 0.05), 0 8px 24px rgba(74, 55, 38, 0.08);
+}
+
+html[data-theme="dark"] {
+  --accent: #{$accent-dark};
+  --accent-hover: #{$accent-dark-hover};
+
+  --global-theme-color: var(--accent);
+  --global-hover-color: var(--accent);
+  --global-bg-color: #1a1714; // warm dark
+  --global-divider-color: rgba(255, 244, 230, 0.10);
+  --global-card-bg-color: #221e19;
+  --navbar-bg: rgba(26, 23, 20, 0.72);
+  --card-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* ---- Base ----------------------------------------------------------------- */
+
+body {
+  font-family: $body-font;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.003em;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 30%, transparent);
+  color: inherit;
+}
+
+// al-folio underlines plain links on hover; we replace that with the animated
+// underline below, so neutralise the default everywhere to avoid a double rule.
+// `table.table a:hover` is matched explicitly because the base rule for it
+// out-specifies a bare `a:hover` (this covers the news table on the about page).
+a:hover,
+table.table a:hover {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.post-title,
+.navbar-brand,
+.header-bar h1 {
+  font-family: var(--display-font);
+  letter-spacing: -0.02em;
+}
+
+/* ---- Hero (about header) -------------------------------------------------- */
+
+.post .post-header {
+  margin-bottom: 1.5rem;
+}
+
+.post-header .post-title {
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.35rem;
+}
+
+// The name itself, signed in a handwritten face — the personal touch.
+.post-header .post-title.author-name {
+  font-family: "Caveat", cursive;
+  font-weight: 700;
+  font-size: 4.5rem;
+  line-height: 1.05;
+  letter-spacing: 0.005em;
+  padding-bottom: 0.5rem;
+}
+
+@media (max-width: 576px) {
+  .post-header .post-title.author-name {
+    font-size: 3.4rem;
+  }
+}
+
+// Accent only the first name.
+.post-header .post-title.author-name .name-accent {
+  color: var(--accent);
+}
+
+// Short accent "trace" marker under the name — the page's quiet signature.
+.post-header .post-title::after {
+  content: "";
+  position: absolute;
+  left: 0.05em;
+  bottom: 0;
+  width: 2.2rem;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--accent);
+}
+
+// Subtitle rendered as a monospace status line, prefixed with an accent prompt.
+.post-header .desc {
+  font-family: var(--mono-font);
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--global-text-color-light);
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+.post-header .desc::before {
+  content: "\25B8\00a0"; // ▸
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* ---- Content links: accent trace underline that wipes in on hover --------- */
+
+// Prose links only — never the .links buttons (BIB / PDF / DOI …) or badges.
+.post article p a,
+a.news-title {
+  color: var(--global-theme-color);
+  text-decoration: none;
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-size: 0% 2px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.25s ease;
+  padding-bottom: 1px;
+}
+
+.post article p a:hover,
+a.news-title:hover {
+  color: var(--global-theme-color);
+  text-decoration: none;
+  background-size: 100% 2px;
+}
+
+/* ---- Centered profile hero: photo, name, subtitle, contact, then bio ------ */
+
+.post-header.about-centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-hero {
+  width: auto;
+  margin: 0 0 1.3rem;
+}
+
+// image_circular: true gives the img bootstrap's .rounded-circle; we just size
+// it to a square and crop so the circle is clean, with no border.
+.post-header .profile-hero img {
+  width: 210px;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: none;
+}
+
+@media (max-width: 576px) {
+  .post-header .profile-hero img {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+.profile-hero .more-info {
+  text-align: center;
+}
+
+// Centre the short accent marker under the name.
+.about-centered .post-header .post-title::after,
+.post-header.about-centered .post-title::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// Contact note above the social icons; icons centred.
+.post-header.about-centered .social {
+  text-align: center;
+  margin-top: 0.4rem;
+}
+
+.post-header.about-centered .social .contact-note {
+  margin: 0 0 0.4rem;
+}
+
+.post-header.about-centered .social .contact-icons {
+  justify-content: center;
+  margin-top: 0.8rem;
+}
+
+/* ---- Bio: full width below the hero, justified with hyphenation ----------- */
+
+.post article .about-bio {
+  margin-top: 1.75rem;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+.post article .about-bio p {
+  line-height: 1.75;
+  margin-bottom: 1.15rem;
+}
+
+.post article .about-bio p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---- Section headings on the landing page --------------------------------- */
+
+.post > article > h2 {
+  font-weight: 600;
+  margin-top: 2.75rem;
+  padding-left: 0.9rem;
+  position: relative;
+}
+
+.post > article > h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.18em;
+  bottom: 0.18em;
+  width: 3px;
+  border-radius: 3px;
+  background: var(--accent);
+}
+
+.post > article > h2 > a {
+  text-decoration: none;
+}
+
+/* ---- Navbar: translucent, blurred, with an active underline indicator ----- */
+
+.navbar {
+  opacity: 1;
+  background-color: var(--navbar-bg) !important;
+  backdrop-filter: saturate(180%) blur(12px);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+// Brand uses the same handwritten signature + accented first name as the hero.
+.navbar.navbar-light .navbar-brand.author-name {
+  font-family: "Caveat", cursive;
+  font-weight: 700;
+  font-size: 1.7rem;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.navbar.navbar-light .navbar-brand.author-name .name-accent {
+  color: var(--accent);
+}
+
+.navbar.navbar-light .navbar-nav .nav-item .nav-link {
+  position: relative;
+  transition: color 0.15s ease;
+}
+
+.navbar.navbar-light .navbar-nav .nav-item .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  right: 0.5rem;
+  bottom: 0.2rem;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+}
+
+.navbar.navbar-light .navbar-nav .nav-item:hover .nav-link::after,
+.navbar.navbar-light .navbar-nav .nav-item.active > .nav-link::after {
+  transform: scaleX(1);
+}
+
+#search-toggle .nav-link {
+  font-family: var(--mono-font);
+  font-size: 0.78rem;
+}
+
+/* ---- Profile image -------------------------------------------------------- */
+
+.profile img {
+  border-radius: 14px;
+  border: 1px solid var(--global-divider-color);
+  box-shadow: var(--card-shadow);
+}
+
+/* ---- News table: quiet hover rows ----------------------------------------- */
+
+// Content-anchored hover (see .publications): the news title is a link that
+// already turns accent + wipes in an underline on hover, so the row itself
+// stays calm — just clean mono dates and hairline separators.
+.news .table th,
+.news .table td {
+  border-top: 1px solid var(--global-divider-color);
+  padding: 0.65rem 0.75rem;
+}
+
+.news .table tr:first-child th,
+.news .table tr:first-child td {
+  border-top: 0;
+}
+
+.news .table th {
+  font-family: var(--mono-font);
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: var(--global-text-color-light);
+  white-space: nowrap;
+}
+
+// Fade siblings on hover, matching the publication list.
+.news .table tr {
+  transition: opacity 0.2s ease;
+}
+
+.news .table:hover tr:not(:hover) {
+  opacity: 0.45;
+}
+
+/* ---- Cards & publication entries: subtle lift ----------------------------- */
+
+.card {
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--global-divider-color);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(20, 23, 35, 0.08), 0 18px 44px rgba(20, 23, 35, 0.1);
+}
+
+/* ---- Publication list ----------------------------------------------------- */
+
+// Hover = focus by dimming: the hovered entry stays full strength, its
+// siblings fade back. Same treatment on the news list.
+.publications ol.bibliography li {
+  padding: 0.95rem 0.4rem;
+  margin-bottom: 0.2rem;
+  transition: opacity 0.2s ease;
+}
+
+.publications ol.bibliography:hover li:not(:hover) {
+  opacity: 0.45;
+}
+
+// Venue badge: compact uppercase mono pill, in the warm accent (soft fill +
+// accent text). !important overrides the per-venue inline background colour.
+.publications ol.bibliography li .abbr abbr.badge {
+  display: inline-block;
+  width: auto;
+  font-family: var(--mono-font);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 6px;
+  padding: 0.22rem 0.55rem;
+  background-color: color-mix(in srgb, var(--accent) 15%, transparent) !important;
+  color: var(--accent);
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+.publications ol.bibliography li .abbr abbr.badge a,
+.publications ol.bibliography li .abbr abbr.badge div {
+  color: var(--accent);
+}
+
+// Preview thumbnail: soft frame.
+.publications ol.bibliography li .preview {
+  border-radius: 8px;
+  border: 1px solid var(--global-divider-color);
+}
+
+// Title: display face, lifts to accent on hover.
+.publications ol.bibliography li .title {
+  font-family: var(--display-font);
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.35rem;
+  transition: color 0.15s ease;
+}
+
+.publications ol.bibliography li:hover .title {
+  color: var(--global-theme-color);
+}
+
+// Authors / venue line: quieter, with the author's own name emphasised.
+.publications ol.bibliography li .author {
+  font-size: 0.92rem;
+  color: var(--global-text-color-light);
+}
+
+.publications ol.bibliography li .author > em {
+  font-weight: 600;
+  font-style: normal;
+  color: var(--global-text-color);
+  border-bottom: none;
+}
+
+.publications ol.bibliography li .periodical {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--global-text-color-light);
+}
+
+// Link buttons: pill shaped, fill with accent on hover.
+.publications ol.bibliography li .links a.btn {
+  border-radius: 50rem;
+  font-family: var(--mono-font);
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  padding: 0.18rem 0.85rem;
+  border-color: var(--global-divider-color);
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.publications ol.bibliography li .links a.btn:hover {
+  background-color: var(--global-theme-color);
+  border-color: var(--global-theme-color);
+  color: #ffffff;
+}
+
+// Award button keeps its highlight identity.
+.publications ol.bibliography li .links a.award.btn:hover {
+  background-color: var(--global-highlight-color);
+  border-color: var(--global-highlight-color);
+  color: #ffffff;
+}
+
+/* ---- Hero social icons: left-aligned chips -------------------------------- */
+
+.post-header .social {
+  text-align: left;
+  margin-top: 1.1rem;
+}
+
+.post-header .social .contact-icons {
+  font-size: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.post-header .social .contact-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 50%;
+  color: var(--global-text-color);
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.post-header .social .contact-icons a i::before {
+  color: var(--global-text-color);
+  transition: color 0.2s ease;
+}
+
+.post-header .social .contact-icons a:hover {
+  transform: translateY(-2px);
+  background-color: var(--accent);
+  border-color: var(--accent);
+}
+
+.post-header .social .contact-icons a:hover i::before {
+  color: #ffffff;
+}
+
+.post-header .social .contact-note {
+  font-size: 0.95rem;
+  color: var(--global-text-color-light);
+  margin-top: 0.6rem;
+}
+
+/* ---- Accessibility floor -------------------------------------------------- */
+
+a:focus-visible,
+button:focus-visible,
+.nav-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/*******************************************************************************
+ * Bengali poem styling (unchanged).
+ ******************************************************************************/
 
 .poem-wrapper {
   display: flex;
