@@ -528,7 +528,10 @@ a.news-title:hover {
 }
 
 .post-header .social .contact-note {
-  font-size: 0.95rem;
+  font-family: var(--mono-font);
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
   color: var(--global-text-color-light);
   margin-top: 0.6rem;
 }
