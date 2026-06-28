@@ -25,10 +25,17 @@ ninja.data = [{
           },
         },{id: "nav-publications",
           title: "publications",
-          description: "a collection of my research...",
+          description: "A collection of my research articles...",
           section: "Navigation",
           handler: () => {
             window.location.href = "/publications/";
+          },
+        },{id: "nav-teaching",
+          title: "teaching",
+          description: "A summary of my teaching and mentoring activities...",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/teaching/";
           },
         },{id: "nav-timeline",
           title: "timeline",
