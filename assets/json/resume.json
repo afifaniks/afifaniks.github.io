@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Md Afif Al Mamun",
-    "title": "Graduate Researcher",
+    "title": "",
     "image": "",
     "email": "afif.mamun@ucalgary.ca",
     "phone": "",
@@ -419,18 +419,7 @@
       "keywords": []
     }
   ],
-  "languages": [
-    {
-      "language": "Bengali",
-      "fluency": "Native speaker",
-      "icon": ""
-    },
-    {
-      "language": "English",
-      "fluency": "Fluent",
-      "icon": ""
-    }
-  ],
+  "languages": [],
   "interests": [],
   "references": [],
   "projects": [
