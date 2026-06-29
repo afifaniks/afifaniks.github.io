@@ -9,7 +9,7 @@ nav_order: 5
 
 ## Sessional Instructor
 
-**University of Calgary** &mdash; Calgary, Alberta
+**University of Calgary** — Calgary, Alberta
 
 <ul>
   <li>
@@ -22,7 +22,7 @@ nav_order: 5
 
 ## Teaching Assistant
 
-**University of Calgary** &mdash; Calgary, Alberta
+**University of Calgary** — Calgary, Alberta
 
 <ul>
   <li>
@@ -49,7 +49,17 @@ nav_order: 5
 
 <ul>
   <li>
+    <strong>Capstone Project Mentor</strong> &mdash; University of Calgary<br>
+    <small class="text-muted">Mentored four undergraduate capstone teams, with one team receiving Second Prize at the ESE Design Fair &middot; Fall 2025 – Winter 2026</small>
+  </li>
+
+  <li>
     <strong>Capstone Project Mentor</strong> &mdash; York University<br>
-    <small class="text-muted">Mentoring students on their capstone project &middot; 2026</small>
+    <small class="text-muted">Mentoring one capstone team &middot; 2026–Present</small>
+  </li>
+
+  <li>
+    <strong>Undergrad Summer Research Mentor</strong> &mdash; DISA Lab<br>
+    <small class="text-muted">Mentored Sameen Rahmatullah (University of Toronto) on a summer research project in software engineering &middot; Summer 2026</small>
   </li>
 </ul>
