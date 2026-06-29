@@ -623,6 +623,216 @@ button:focus-visible,
 }
 
 /*******************************************************************************
+ * Vitae page — flat editorial layout, scoped to `.cv`.
+ *
+ * The stock al-folio includes box every section in a shadowed `.card`, which
+ * clashes with the flat, hairline language used on the rest of the site
+ * (news, publications). Here we strip the card chrome and lay the resume out
+ * as one quiet document: large display section headers over a full hairline,
+ * entries flowing as a list with the date sitting quietly at the right of each
+ * entry's title row, siblings dimming to focus the one you hover.
+ ******************************************************************************/
+
+/* ---- Strip the boxed card chrome ------------------------------------------ */
+
+.cv .card {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 3.25rem 0 0;
+}
+
+.cv .card:first-of-type {
+  margin-top: 0.5rem;
+}
+
+.cv .card:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* ---- Section header: large display title over a full hairline ------------- */
+
+.cv .card .card-title {
+  font-family: var(--display-font);
+  font-weight: 700;
+  font-size: 1.7rem;
+  letter-spacing: -0.025em;
+  color: var(--global-text-color);
+  padding-bottom: 0.6rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--global-divider-color);
+  position: relative;
+}
+
+/* Short accent segment riding on the hairline — the section's marker. */
+.cv .card .card-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 2.6rem;
+  height: 2px;
+  background: var(--accent);
+}
+
+@media (max-width: 576px) {
+  .cv .card .card-title {
+    font-size: 1.45rem;
+  }
+}
+
+/* ---- Entries: flat list, date quietly to the right ------------------------ */
+
+.cv .list-group-flush {
+  margin: 0;
+}
+
+.cv .list-group-flush .list-group-item {
+  background: transparent;
+  border: 0;
+  padding: 0 0 1.6rem;
+  transition: opacity 0.2s ease;
+}
+
+.cv .list-group-flush .list-group-item:last-child {
+  padding-bottom: 0;
+}
+
+.cv .list-group-flush:hover .list-group-item:not(:hover) {
+  opacity: 0.45;
+}
+
+/* Date: soft accent-tinted rounded pill. The selector mirrors the theme's
+   `.cv .card .list-group-item .badge` (0,4,0) and adds a class so it actually
+   wins — otherwise the theme paints its own solid accent box. */
+.cv .card .list-group-item .badge.danger-color-dark {
+  background-color: color-mix(in srgb, var(--accent) 15%, transparent) !important;
+  color: var(--accent) !important;
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+  font-family: var(--mono-font);
+  font-weight: 600 !important;
+  font-size: 0.72rem;
+  letter-spacing: 0.01em;
+  border-radius: 6px;
+  padding: 0.22rem 0.55rem !important;
+  min-width: 0 !important;
+  white-space: nowrap;
+}
+
+/* Theme nudges every .date-column by -15px/-5px; cancel it on the vitae page
+   so the date aligns cleanly (mobile + desktop). */
+.cv .date-column {
+  transform: none;
+}
+
+/* Entry title: display face, lifts to accent on hover. */
+.cv .list-group-item .title {
+  font-family: var(--display-font);
+  font-size: 1.08rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.1rem;
+}
+
+.cv .list-group-item .title a {
+  color: var(--global-text-color);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.cv .list-group-item:hover .title a {
+  color: var(--global-theme-color);
+}
+
+/* Tech / course chips under an entry. */
+.cv .list-group-item .items {
+  margin-top: 0.4rem;
+}
+
+.cv .list-group-item .items .item {
+  display: inline-block;
+  font-family: var(--mono-font);
+  font-size: 0.72rem;
+  color: var(--global-text-color-light);
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 50rem;
+  padding: 0.05rem 0.6rem;
+  margin: 0.15rem 0.2rem 0 0;
+}
+
+/* Date sits top-right of each entry (md+). Rather than fight Bootstrap's grid
+   by reordering columns, the content goes full-width and the date column is
+   lifted out of flow and pinned to the top-right corner. On mobile the columns
+   just stack naturally. */
+@media (min-width: 768px) {
+  .cv .list-group-flush .list-group-item > .row {
+    display: block;
+    position: relative;
+    margin: 0;
+  }
+
+  /* Content: full width, flush-left, with right room reserved for the date. */
+  .cv .list-group-flush .list-group-item > .row > [class*="col-md-10"] {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 10rem;
+  }
+
+  .cv .list-group-flush .list-group-item .ml-md-4 {
+    margin-left: 0 !important; /* flush-left with the section header */
+  }
+
+  /* Date: pinned top-right, out of flow, right-aligned. */
+  .cv .list-group-flush .list-group-item > .row > .date-column {
+    position: absolute;
+    top: 0.2rem;
+    right: 0;
+    width: auto;
+    max-width: 9rem;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    transform: none; /* cancel theme's -15px/-5px nudge */
+  }
+
+  .cv .list-group-flush .list-group-item > .row > .date-column .table-cv,
+  .cv .list-group-flush .list-group-item > .row > .date-column td {
+    width: 100%;
+    text-align: right;
+  }
+
+  .cv .list-group-flush .list-group-item > .row > .date-column .location {
+    text-align: right;
+    margin-top: 0.25rem;
+  }
+}
+
+/* ---- Skills / certificates grid: flat, just the header treatment ---------- */
+
+.cv .list-groups .list-group {
+  transition: opacity 0.2s ease;
+}
+
+.cv .list-groups:hover .list-group:not(:hover) {
+  opacity: 0.45;
+}
+
+.cv .list-group-category a {
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.cv .list-group .list-group-table:hover .list-group-category a {
+  color: var(--global-theme-color);
+}
+
+/*******************************************************************************
  * Bengali poem styling (unchanged).
  ******************************************************************************/
 

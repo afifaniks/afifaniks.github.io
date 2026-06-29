@@ -1,7 +1,7 @@
 ---
 layout: cv
-permalink: /timeline/
-title: timeline
+permalink: /vitae/
+title: vitae
 nav: true
 nav_order: 6
 # cv_pdf: blank # you can also use external links here
