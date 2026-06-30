@@ -156,6 +156,20 @@
   ],
   "awards": [
     {
+      "title": "ESE Graduate Research Award",
+      "date": "2026-03-27",
+      "awarder": "University of Calgary",
+      "url": "",
+      "summary": ""
+    },
+    {
+      "title": "Mitacs Accelerate Research Internship",
+      "date": "2026-01-01",
+      "awarder": "Mitacs/IBM Canada",
+      "url": "",
+      "summary": ""
+    },
+    {
       "title": "Alberta Graduate Excellence Scholarship (AGES)",
       "date": "2025-06-25",
       "awarder": "University of Calgary",
@@ -175,6 +189,13 @@
       "awarder": "FSE 2025",
       "url": "",
       "summary": "Awarded this for our paper titled Hallucination Detection in Large Language Models with Metamorphic Relations."
+    },
+    {
+      "title": "Mitacs Accelerate Research Internship",
+      "date": "2025-01-01",
+      "awarder": "Mitacs/IBM Canada",
+      "url": "",
+      "summary": ""
     },
     {
       "title": "IBM CAS Project of the Year Award",
