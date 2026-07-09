@@ -165,8 +165,8 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/blagent-tosem/";
-            },},{id: "news-received-the-alberta-graduate-excellence-scholarship-ages-international-2026-for-the-third-time",
-          title: 'Received the Alberta Graduate Excellence Scholarship (AGES) – International 2026 for the third...',
+            },},{id: "news-received-the-alberta-graduate-excellence-scholarship-ages-international-for-the-third-time",
+          title: 'Received the Alberta Graduate Excellence Scholarship (AGES) – International for the third time!...',
           description: "",
           section: "News",},{
         id: 'social-email',
