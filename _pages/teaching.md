@@ -30,7 +30,7 @@ nav_order: 5
     <small class="text-muted">Fall 2025, Winter 2026</small>
   </li>
   <li>
-    <strong>ENSF 401:</strong> Software Architecture<br>
+    <strong>SENG 401:</strong> Software Architecture<br>
     <small class="text-muted">Winter 2024, Winter 2025, Winter 2026</small>
   </li>
   <li>
