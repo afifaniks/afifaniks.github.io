@@ -168,8 +168,8 @@ ninja.data = [{
             },},{id: "news-received-the-alberta-graduate-excellence-scholarship-ages-international-for-the-third-time",
           title: 'Received the Alberta Graduate Excellence Scholarship (AGES) – International for the third time!...',
           description: "",
-          section: "News",},{id: "news-ase26-llmide-sec",
-          title: 'Ase26 Llmide Sec',
+          section: "News",},{id: "news-our-paper-impossible-to-hide-secret-uncovering-security-and-privacy-issues-in-llm-native-ides-has-been-accepted-to-ase-2026",
+          title: 'Our paper “Impossible to hide secret ...”: Uncovering Security and Privacy Issues in...',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/ase26-llmide-sec/";
