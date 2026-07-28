@@ -168,7 +168,12 @@ ninja.data = [{
             },},{id: "news-received-the-alberta-graduate-excellence-scholarship-ages-international-for-the-third-time",
           title: 'Received the Alberta Graduate Excellence Scholarship (AGES) – International for the third time!...',
           description: "",
-          section: "News",},{
+          section: "News",},{id: "news-ase26-llmide-sec",
+          title: 'Ase26 Llmide Sec',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/ase26-llmide-sec/";
+            },},{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
