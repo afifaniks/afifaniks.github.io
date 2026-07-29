@@ -16,13 +16,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/news/";
           },
-        },{id: "nav-blog",
-          title: "blog",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/blog/";
-          },
         },{id: "nav-publications",
           title: "publications",
           description: "A collection of my research articles...",
@@ -44,7 +37,21 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/vitae/";
           },
-        },{id: "post-she",
+        },{id: "dropdown-blog",
+              title: "blog",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/blog/";
+              },
+            },{id: "dropdown-marginalia",
+              title: "marginalia",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "";
+              },
+            },{id: "post-she",
       
         title: "She",
       
