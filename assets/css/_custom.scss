@@ -308,28 +308,113 @@ a.news-title:hover {
   transition: color 0.15s ease;
 }
 
+// Utility controls (search + theme toggle). Getting these to line up needs a
+// few things working together, so keep them here as one unit:
+//  1. Center the whole nav row on desktop so every item shares a centerline.
+//  2. Make each toggle a real flex icon-button — this normalizes the fact that
+//     the active theme <i> is display:block while the search <i> is inline,
+//     which is what threw them out of alignment.
+//  3. Strip the theme's ad-hoc icon padding (padding-top:12px etc.) and match
+//     the icon size. Do NOT touch the icons' `display` — the theme uses it to
+//     show/hide the active theme glyph.
+@media (min-width: 576px) {
+  .navbar.navbar-light .navbar-nav {
+    align-items: center;
+  }
+}
+
+.navbar.navbar-light .navbar-nav .toggle-container {
+  display: flex;
+  align-items: center;
+  margin-left: 0.85rem;
+}
+
+.navbar.navbar-light #search-toggle,
+.navbar.navbar-light #light-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar #search-toggle i,
+.navbar #light-toggle i {
+  padding: 0 !important;
+  margin: 0 !important;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+// No underline indicator: nav state is shown by colour alone (hover + active).
+// This also suppresses Bootstrap's default dropdown caret on "more" — the
+// chevron is drawn separately on ::before.
 .navbar.navbar-light .navbar-nav .nav-item .nav-link::after {
+  display: none;
+}
+
+// Active/selected item: colour change only, no bold.
+.navbar.navbar-light .navbar-nav .nav-item.active > .nav-link {
+  font-weight: inherit;
+}
+
+// --- "more" dropdown: caret, hover-to-open, and warm palette --------------
+// Add a chevron next to the toggle (the theme's ::after is used for the
+// underline, so the caret rides on ::before, positioned to the right).
+.navbar.navbar-light .navbar-nav .nav-item.dropdown > .dropdown-toggle {
+  padding-right: 1.15rem;
+}
+
+.navbar.navbar-light .navbar-nav .nav-item.dropdown > .dropdown-toggle::before {
   content: "";
   position: absolute;
-  left: 0.5rem;
-  right: 0.5rem;
-  bottom: 0.2rem;
-  height: 2px;
-  border-radius: 2px;
-  background: var(--accent);
-  transform: scaleX(0);
-  transform-origin: left;
+  right: 0.3rem;
+  top: 50%;
+  width: 0.42rem;
+  height: 0.42rem;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-70%) rotate(45deg);
   transition: transform 0.2s ease;
+  opacity: 0.75;
 }
 
-.navbar.navbar-light .navbar-nav .nav-item:hover .nav-link::after,
-.navbar.navbar-light .navbar-nav .nav-item.active > .nav-link::after {
-  transform: scaleX(1);
+// Flip the chevron up while open (hover on desktop, or clicked/keyboard open).
+.navbar.navbar-light .navbar-nav .nav-item.dropdown:hover > .dropdown-toggle::before,
+.navbar.navbar-light .navbar-nav .nav-item.dropdown > .dropdown-toggle[aria-expanded="true"]::before {
+  transform: translateY(-30%) rotate(-135deg);
 }
 
-#search-toggle .nav-link {
-  font-family: var(--mono-font);
-  font-size: 0.78rem;
+// Open the menu on hover when the navbar is expanded (>= sm). On smaller
+// screens the menu lives in the collapsed hamburger and opens on tap via JS.
+@media (min-width: 576px) {
+  .navbar.navbar-light .navbar-nav .nav-item.dropdown:hover > .dropdown-menu {
+    display: block;
+  }
+}
+
+// Warm-palette menu (Bootstrap defaults the active item to blue).
+.navbar .dropdown-menu {
+  margin-top: 0; // flush under the toggle so hover doesn't cross a dead gap
+  padding: 0.3rem;
+  border-radius: 8px;
+  box-shadow: 0 8px 22px color-mix(in srgb, var(--accent) 14%, transparent);
+}
+
+.navbar .dropdown-menu .dropdown-item {
+  border-radius: 6px;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.92rem;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover,
+.navbar .dropdown-menu .dropdown-item:focus {
+  color: var(--accent);
+  background-color: color-mix(in srgb, var(--accent) 12%, transparent);
+}
+
+.navbar .dropdown-menu .dropdown-item.active,
+.navbar .dropdown-menu .dropdown-item:active {
+  color: var(--accent);
+  background-color: color-mix(in srgb, var(--accent) 18%, transparent);
 }
 
 /* ---- Profile image -------------------------------------------------------- */
@@ -1027,5 +1112,455 @@ button:focus-visible,
     line-height: 2.35;
     padding-left: 1.8rem;
     padding-right: 0;
+  }
+}
+
+// ===========================================================================
+// Marginalia page (_pages/marginalia.md): favourites lists. One shared design
+// language (warm accent, display/mono fonts, tinted tiles) with a distinct
+// signature layout per section.
+// ===========================================================================
+.marginalia {
+  margin-top: 0.5rem;
+}
+
+.fav-section {
+  margin-bottom: 3.25rem;
+}
+
+.fav-section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--display-font);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.4rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.fav-section-icon {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.fav-section-count {
+  font-family: var(--mono-font);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--accent);
+  background-color: color-mix(in srgb, var(--accent) 14%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 28%, transparent);
+  border-radius: 999px;
+  padding: 0.05rem 0.5rem;
+  margin-left: 0.1rem;
+}
+
+// Shared one-line "why it stuck with me" note.
+.fav-note {
+  font-size: 0.85rem;
+  font-style: italic;
+  line-height: 1.45;
+  color: var(--global-text-color-light);
+  margin-top: 0.35rem;
+}
+
+// Shared typographic fallback shown behind covers/posters until (or unless) an
+// image loads over it.
+.fav-cover-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.6rem;
+  font-family: var(--display-font);
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--accent);
+  background-color: color-mix(in srgb, var(--accent) 10%, var(--global-bg-color));
+}
+
+.fav-cover-fallback-note {
+  font-size: 1.6rem;
+}
+
+// --- Shared horizontal "shelf": scrolls sideways when it has many items,
+//     instead of growing the page. Swipe-friendly on touch screens.
+.fav-shelf {
+  display: flex;
+  gap: 1.4rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x proximity;
+  padding: 0.5rem 0.25rem 1.1rem;
+  margin: 0 -0.25rem;
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--accent) 35%, transparent) transparent;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+}
+
+.fav-shelf::-webkit-scrollbar {
+  height: 8px;
+}
+
+.fav-shelf::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.fav-shelf::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--accent) 28%, transparent);
+  border-radius: 4px;
+}
+
+.fav-shelf::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--accent) 45%, transparent);
+}
+
+.fav-shelf > * {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+// Cover/poster/art frame shared by books, movies, songs.
+.fav-cover-frame {
+  display: block;
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--global-divider-color);
+  box-shadow: 0 6px 16px color-mix(in srgb, var(--accent) 10%, transparent);
+  transition: box-shadow 0.18s ease;
+
+  img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.25s ease;
+  }
+}
+
+.fav-cover-frame:hover {
+  box-shadow: 0 10px 22px color-mix(in srgb, var(--accent) 20%, transparent);
+}
+
+.fav-cover-frame:hover img {
+  transform: scale(1.06);
+}
+
+// --- Books: cover-thumbnail rows in a 2-up grid, collapsed after 10 -------
+.fav-books {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.3rem 1.75rem;
+}
+
+.fav-book {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+// Collapse: hide items past the first 10 until the toggle is checked.
+.fav-extra {
+  display: none;
+}
+
+.fav-toggle-cb:checked ~ .fav-books .fav-extra {
+  display: flex;
+}
+
+// "Show all / Show fewer" toggle — a quiet accent text button.
+.fav-more-toggle {
+  display: inline-block;
+  margin-top: 0.9rem;
+  cursor: pointer;
+  font-family: var(--mono-font);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.fav-more-toggle:hover {
+  text-decoration: underline;
+}
+
+.fav-more-hide {
+  display: none;
+}
+
+.fav-toggle-cb:checked ~ .fav-more-toggle .fav-more-show {
+  display: none;
+}
+
+.fav-toggle-cb:checked ~ .fav-more-toggle .fav-more-hide {
+  display: inline;
+}
+
+.fav-book-cover {
+  width: 42px;
+  aspect-ratio: 2 / 3;
+  flex-shrink: 0;
+  border-radius: 4px;
+  box-shadow: 0 3px 8px color-mix(in srgb, var(--accent) 12%, transparent);
+}
+
+.fav-book-meta {
+  min-width: 0;
+}
+
+.fav-book-title {
+  font-family: var(--display-font);
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.fav-book-author {
+  font-size: 0.82rem;
+  color: var(--global-text-color-light);
+  margin-top: 0.1rem;
+}
+
+// --- Papers: minimal reading list; scrolls vertically if the list is long -
+.fav-papers {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 26rem;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--accent) 35%, transparent) transparent;
+}
+
+.fav-papers::-webkit-scrollbar {
+  width: 8px;
+}
+
+.fav-papers::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--accent) 28%, transparent);
+  border-radius: 4px;
+}
+
+.fav-paper {
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.fav-paper:last-child {
+  border-bottom: none;
+}
+
+.fav-paper-title {
+  font-family: var(--display-font);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--global-text-color);
+  text-decoration: none;
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 1px;
+  transition: background-size 0.2s ease, color 0.15s ease;
+}
+
+a.fav-paper-title:hover {
+  color: var(--accent);
+  background-size: 100% 1px;
+}
+
+.fav-paper-authors {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--global-text-color-light);
+  margin-top: 0.15rem;
+}
+
+// --- Movies ---------------------------------------------------------------
+.fav-movie {
+  width: 168px;
+}
+
+.fav-movie-poster {
+  aspect-ratio: 2 / 3;
+}
+
+.fav-movie-meta {
+  margin-top: 0.6rem;
+}
+
+.fav-movie-title {
+  font-family: var(--display-font);
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.fav-movie-year {
+  font-family: var(--mono-font);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--global-text-color-light);
+}
+
+.fav-movie-director {
+  font-size: 0.8rem;
+  color: var(--global-text-color-light);
+  margin-top: 0.1rem;
+}
+
+// --- Songs: album-art thumbnail rows, arranged in a responsive grid -------
+.fav-songs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 0.4rem 1.75rem;
+  max-height: 30rem;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--accent) 35%, transparent) transparent;
+}
+
+.fav-songs::-webkit-scrollbar {
+  width: 8px;
+}
+
+.fav-songs::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--accent) 28%, transparent);
+  border-radius: 4px;
+}
+
+.fav-song {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.fav-song-cover {
+  width: 46px;
+  aspect-ratio: 1 / 1;
+  flex-shrink: 0;
+  border-radius: 5px;
+  box-shadow: 0 3px 8px color-mix(in srgb, var(--accent) 12%, transparent);
+}
+
+.fav-song-meta {
+  min-width: 0;
+}
+
+.fav-song-title {
+  font-family: var(--display-font);
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.fav-song-artist {
+  font-size: 0.82rem;
+  color: var(--global-text-color);
+  margin-top: 0.05rem;
+}
+
+.fav-song-album {
+  font-family: var(--mono-font);
+  font-size: 0.7rem;
+  color: var(--global-text-color-light);
+  margin-top: 0.1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// --- Quotes: simple vertical list (like Papers) --------------------------
+.fav-quotes {
+  max-height: 26rem;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--accent) 35%, transparent) transparent;
+}
+
+.fav-quotes::-webkit-scrollbar {
+  width: 8px;
+}
+
+.fav-quotes::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--accent) 28%, transparent);
+  border-radius: 4px;
+}
+
+.fav-quote {
+  margin: 0;
+  padding: 0.8rem 0;
+  border: 0; // reset the theme's global blockquote left accent
+  border-bottom: 1px solid var(--global-divider-color);
+  background: none;
+}
+
+.fav-quote:last-child {
+  border-bottom: none;
+}
+
+.fav-quote-text {
+  font-family: var(--display-font);
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.5;
+  margin: 0 0 0.4rem;
+  color: var(--global-text-color);
+}
+
+.fav-quote-attr {
+  font-family: var(--mono-font);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--accent);
+}
+
+.fav-quote-attr::before {
+  content: "— ";
+}
+
+.fav-quote-source {
+  display: block;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--global-text-color-light);
+  margin-top: 0.2rem;
+  letter-spacing: 0;
+}
+
+@media (max-width: 576px) {
+  .fav-section {
+    margin-bottom: 2.5rem;
+  }
+
+  .fav-shelf {
+    gap: 1rem;
+  }
+
+  .fav-movie {
+    width: 132px;
+  }
+
+  .fav-books,
+  .fav-songs {
+    grid-template-columns: 1fr;
+  }
+
+  .fav-section-title {
+    font-size: 1.3rem;
   }
 }

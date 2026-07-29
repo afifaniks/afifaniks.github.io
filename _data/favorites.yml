@@ -1,0 +1,174 @@
+# ---------------------------------------------------------------------------
+# Data for the "marginalia" page (_pages/marginalia.md).
+# Edit the lists below — the page renders itself. Any list left empty is
+# hidden automatically. Every field marked "optional" can be omitted.
+# ---------------------------------------------------------------------------
+
+# Books ----------------------------------------------------------------------
+# Cover art loads automatically from the Open Library Covers API using `isbn`.
+# If a book has no cover on file, a typographic tile is shown instead.
+#   isbn   : ISBN-13 or ISBN-10 (drives the cover). optional but recommended.
+#   cover  : optional direct image URL to override the auto cover.
+#   url    : optional link (Goodreads / StoryGraph / publisher).
+# The list collapses after the first 10 items with a "Show all" toggle.
+books:
+  - title: "The Stranger"
+    author: "Albert Camus"
+    isbn: "9780679720201"
+    url: "https://www.goodreads.com/book/show/49552.The_Stranger"
+  - title: "The Metamorphosis"
+    author: "Franz Kafka"
+    isbn: "9780141188126"
+    url: "https://www.goodreads.com/book/show/485894.The_Metamorphosis"
+  - title: "Kafka on the Shore"
+    author: "Haruki Murakami"
+    isbn: "9781400079278"
+    url: "https://www.goodreads.com/book/show/4929.Kafka_on_the_Shore"
+  - title: "Paper Towns"
+    author: "John Green"
+    isbn: "9780142414934"
+    url: "https://www.goodreads.com/book/show/6442769-paper-towns"
+  - title: "Kobi (কবি)"
+    author: "Tarashankar Bandyopadhyay"
+    cover: "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1365849014i/12498847.jpg"
+    url: "https://www.goodreads.com/book/show/12498847"
+  - title: "Inferno"
+    author: "Dan Brown"
+    isbn: "9780345806482"
+    url: "https://www.goodreads.com/book/show/17212231-inferno"
+  - title: "Dragon"
+    author: "Clive Cussler"
+    isbn: "9780007205608"
+    url: "https://www.goodreads.com/book/show/41694.Dragon"
+  - title: "Uncle Tom's Cabin"
+    author: "Harriet Beecher Stowe"
+    isbn: "9780023796319"
+    url: "https://www.goodreads.com/book/show/46787.Uncle_Tom_s_Cabin"
+  - title: "Norwegian Wood"
+    author: "Haruki Murakami"
+    isbn: "9780099448822"
+    url: "https://www.goodreads.com/book/show/11297.Norwegian_Wood"
+  - title: "The Eye of the Tiger"
+    author: "Wilbur Smith"
+    isbn: "9780312979393"
+    url: "https://www.goodreads.com/book/show/74783.The_Eye_of_the_Tiger"
+  - title: "The Hound of the Baskervilles"
+    author: "Arthur Conan Doyle"
+    isbn: "9780007368570"
+    url: "https://www.goodreads.com/book/show/8921.The_Hound_of_the_Baskervilles"
+  - title: "Sapiens: A Brief History of Humankind"
+    author: "Yuval Noah Harari"
+    isbn: "9780062316097"
+    url: "https://www.goodreads.com/book/show/23692271-sapiens"
+
+# Papers ---------------------------------------------------------------------
+# Kept intentionally minimal: title, authors, and a link.
+papers:
+  - title: "Attention Is All You Need"
+    authors: "Vaswani et al."
+    url: "https://arxiv.org/abs/1706.03762"
+  - title: "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding"
+    authors: "Devlin, Chang, Lee & Toutanova"
+    url: "https://arxiv.org/abs/1810.04805"
+  - title: "A Few Useful Things to Know About Machine Learning"
+    authors: "Pedro Domingos"
+    url: "https://homes.cs.washington.edu/~pedrod/papers/cacm12.pdf"
+
+# Movies ---------------------------------------------------------------------
+# Paste a poster image URL in `poster:`. A convenient stable source is TMDB's
+# image CDN — find a film on themoviedb.org, right-click its poster, and use
+# the https://image.tmdb.org/t/p/w500/<id>.jpg link (no API key needed just to
+# display it). A local path (/assets/img/...) works too. If `poster:` is
+# omitted, a clean typographic title tile is shown instead.
+#   url : optional link (Letterboxd / IMDb).
+# movies:
+#   - title: "Interstellar"
+#     year: 2014
+#     director: "Christopher Nolan"
+#     poster: "https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg"
+#     note: "Love, relativity, and a corn field. Somehow it works."
+#   - title: "The Social Network"
+#     year: 2010
+#     director: "David Fincher"
+#     poster: "https://image.tmdb.org/t/p/w500/n0ybibhJtQ5icDqTp8eRytcIHJx.jpg"
+#     note: "The most quotable script about building software."
+#   - title: "Whiplash"
+#     year: 2014
+#     director: "Damien Chazelle"
+#     poster: "https://image.tmdb.org/t/p/w500/7fn624j5lj3xTme2SgiLCeuedmO.jpg"
+#     note: "On the thin line between drive and obsession."
+
+# Songs ----------------------------------------------------------------------
+# Album art auto-loads from Apple's keyless iTunes Search API using
+# `artist` + `title`. The `spotify` link (if given) makes the cover clickable
+# so visitors can play the track on Spotify.
+#   spotify : optional Spotify track URL (used for the click-through/play link).
+#   cover   : optional direct image URL to override the auto cover.
+#   note    : optional.
+songs:
+  - title: "The Unsetting Sun"
+    artist: "Hammock"
+    album: "The Second Coming Was a Moonrise"
+  - title: "Stressed Out"
+    artist: "Twenty One Pilots"
+    album: "Blurryface"
+  - title: "Black Hole Sun"
+    artist: "Soundgarden"
+    album: "Superunknown"
+  - title: "Fake Plastic Trees"
+    artist: "Radiohead"
+    album: "The Bends"
+  - title: "With or Without You"
+    artist: "U2"
+    album: "The Joshua Tree"
+  - title: "Mama, I'm Coming Home"
+    artist: "Ozzy Osbourne"
+    album: "No More Tears"
+  - title: "Sweet Disposition"
+    artist: "The Temper Trap"
+    album: "Conditions"
+  - title: "Nutshell"
+    artist: "Alice in Chains"
+    album: "Jar of Flies"
+  - title: "One Last Breath"
+    artist: "Creed"
+    album: "Weathered"
+  - title: "Runaway"
+    artist: "Kanye West"
+    album: "Runaway"
+  - title: "Rebirth"
+    artist: "Vancouver Sleep Clinic"
+    album: "Winter"
+  - title: "My Hero"
+    artist: "Foo Fighters"
+    album: "The Colour and the Shape"
+  - title: "A Thimble Full of Sorrow"
+    artist: "Rhian Sheehan"
+    album: "Stories From Elsewhere"
+  - title: "Olsen Olsen"
+    artist: "Sigur Rós"
+    album: "Ágætis byrjun"
+  - title: "Holocene"
+    artist: "Bon Iver"
+    album: "Bon Iver"
+  - title: "Purple Rain"
+    artist: "Prince"
+    album: "Purple Rain"
+  - title: "Chasing Cars"
+    artist: "Snow Patrol"
+    album: "Eyes Open"
+  - title: "In My Time of Need"
+    artist: "Opeth"
+    album: "Damnation"
+
+# Quotes ---------------------------------------------------------------------
+# #   source : optional (book, talk, etc.).
+# quotes:
+#   - text: "The important thing is not to stop questioning. Curiosity has its own reason for existing."
+#     author: "Albert Einstein"
+#   - text: "Premature optimization is the root of all evil."
+#     author: "Donald Knuth"
+#     source: "Structured Programming with go to Statements"
+#   - text: "We can only see a short distance ahead, but we can see plenty there that needs to be done."
+#     author: "Alan Turing"
+#     source: "Computing Machinery and Intelligence"

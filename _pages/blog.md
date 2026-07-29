@@ -2,8 +2,7 @@
 layout: default
 permalink: /blog/
 title: blog
-nav: true
-nav_order: 1
+nav: false # surfaced via the "more" dropdown (_pages/dropdown.md)
 pagination:
   enabled: true
   collection: posts
