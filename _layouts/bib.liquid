@@ -52,7 +52,7 @@
     <!-- Title -->
     <div class="title">
       {%- if entry.pub_type -%}
-        <span class="pub-type-badge pub-type-{{ entry.pub_type | downcase }}">{{ entry.pub_type }}</span>
+        <span class="pub-type-badge pub-type-{{ entry.pub_type | downcase }}">{{ entry.pub_type }}{{ entry.pub_number }}</span>
       {%- endif -%}
       {{ entry.title }}
     </div>

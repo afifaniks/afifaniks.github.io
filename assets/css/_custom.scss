@@ -400,29 +400,122 @@ a.news-title:hover {
   opacity: 0.45;
 }
 
-// Publications page stat line.
-.pub-stats {
-  font-family: var(--mono-font);
-  font-size: 0.85rem;
-  color: var(--global-text-color-light);
-  margin-bottom: 1.5rem;
+// Publications page overview: total + proportional "mix" bar.
+.pub-overview {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.75rem;
 }
 
-.pub-stat-badge {
-  display: inline-block;
+.pub-overview-total {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.pub-overview-num {
+  font-family: var(--display-font);
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+}
+
+.pub-overview-label {
   font-family: var(--mono-font);
   font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
+  font-weight: 600;
   text-transform: uppercase;
-  border-radius: 6px;
-  padding: 0.1rem 0.45rem;
-  background-color: color-mix(in srgb, var(--accent) 15%, transparent);
-  color: var(--accent) !important;
-  border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
-  vertical-align: middle;
-  position: relative;
-  top: -0.05em;
+  letter-spacing: 0.1em;
+  color: var(--global-text-color-light);
+  margin-top: 0.35rem;
+}
+
+.pub-overview-chart {
+  // Shrink-wrap to the legend width so the bar spans the same length as the
+  // legend row rather than stretching to fill the page.
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+.pub-mix-bar {
+  display: flex;
+  gap: 3px;
+  height: 14px;
+  width: 100%;
+}
+
+.pub-mix-seg {
+  display: block;
+  min-width: 6px;
+  border-radius: 4px;
+  transition: opacity 0.15s ease;
+}
+
+.pub-mix-bar:hover .pub-mix-seg {
+  opacity: 0.55;
+}
+
+.pub-mix-bar:hover .pub-mix-seg:hover {
+  opacity: 1;
+}
+
+.pub-mix-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  margin-top: 0.7rem;
+  font-family: var(--mono-font);
+  font-size: 0.72rem;
+  color: var(--global-text-color-light);
+}
+
+.pub-mix-key {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.pub-mix-dot {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 3px;
+  margin-right: 0.4rem;
+  flex-shrink: 0;
+}
+
+// Four tints of the warm accent, biggest type most saturated.
+.pub-mix-c { background-color: color-mix(in srgb, var(--accent) 88%, var(--global-bg-color)); }
+.pub-mix-j { background-color: color-mix(in srgb, var(--accent) 62%, var(--global-bg-color)); }
+.pub-mix-p { background-color: color-mix(in srgb, var(--accent) 42%, var(--global-bg-color)); }
+.pub-mix-t { background-color: color-mix(in srgb, var(--accent) 26%, var(--global-bg-color)); }
+
+@media (max-width: 576px) {
+  .pub-overview {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.9rem;
+  }
+
+  .pub-overview-total {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 0.45rem;
+  }
+
+  .pub-overview-num {
+    font-size: 2rem;
+  }
+
+  .pub-overview-label {
+    margin-top: 0;
+  }
+
+  .pub-overview-chart {
+    width: 100%;
+  }
 }
 
 // Publication type pill: inline (J) / (C) / (P) badge left of paper title.

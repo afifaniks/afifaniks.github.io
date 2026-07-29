@@ -322,6 +322,7 @@ filtered_bibtex_keywords:
     poster,
     preview,
     pub_type,
+    pub_number,
     selected,
     slides,
     supp,
