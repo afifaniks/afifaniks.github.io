@@ -258,7 +258,6 @@
       {% if entry.website %}
         <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button">Website</a>
       {% endif %}
-    </div>
     {% if site.enable_publication_badges %}
       {% assign entry_has_altmetric_badge = false %}
       {% if entry.altmetric and entry.altmetric != 'false' %}
@@ -319,13 +318,13 @@
           {% if site.enable_publication_badges.google_scholar and entry_has_google_scholar_badge %}
             <a
               href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user={{ site.data.socials.scholar_userid }}&citation_for_view={{ site.data.socials.scholar_userid }}:{{ entry.google_scholar_id }}"
-              aria-label="Google Scholar link"
+              class="btn btn-sm z-depth-0 scholar-citations"
+              title="Google Scholar citations"
+              aria-label="{% google_scholar_citations site.data.socials.scholar_userid entry.google_scholar_id %} Google Scholar citations"
               role="button"
             >
-              <img
-                src="https://img.shields.io/badge/scholar-{% google_scholar_citations site.data.socials.scholar_userid entry.google_scholar_id %}-4285F4?logo=googlescholar&labelColor=beige"
-                alt="{% google_scholar_citations site.data.socials.scholar_userid entry.google_scholar_id %} Google Scholar citations"
-              >
+              <i class="ai ai-google-scholar" aria-hidden="true"></i>
+              <span>{% google_scholar_citations site.data.socials.scholar_userid entry.google_scholar_id %}</span>
             </a>
           {% endif %}
           {% if site.enable_publication_badges.inspirehep and entry_has_inspirehep_badge %}
@@ -343,6 +342,7 @@
         </div>
       {% endif %}
     {% endif %}
+    </div>
 
     {% if entry.award %}
       <!-- Hidden Award block -->

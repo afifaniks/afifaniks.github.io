@@ -812,7 +812,10 @@ footer.sticky-bottom {
       }
 
       .badges {
-        padding-bottom: 0.5rem;
+        display: inline-block;
+        padding-bottom: 0;
+        padding-left: 0.25rem;
+        vertical-align: middle;
         span {
           display: inline-block;
           color: $black-color;
@@ -822,6 +825,35 @@ footer.sticky-bottom {
 
           &:hover {
             text-decoration: underline;
+          }
+        }
+
+        a.btn.scholar-citations {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.3rem;
+          background-color: var(--global-theme-color);
+          border-color: var(--global-theme-color);
+          color: white;
+
+          i {
+            font-size: 1.1em;
+          }
+
+          span {
+            color: white;
+            padding-right: 0;
+
+            &:hover {
+              text-decoration: none;
+            }
+          }
+
+          &:hover {
+            background-color: var(--global-hover-color);
+            border-color: var(--global-hover-color);
+            color: white;
+            text-decoration: none;
           }
         }
       }
