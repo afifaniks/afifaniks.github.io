@@ -180,7 +180,10 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/ase26-llmide-sec/";
-            },},{
+            },},{id: "news-our-paper-on-security-and-privacy-issues-in-llm-native-ides-was-featured-in-the-register",
+          title: 'Our paper on security and privacy issues in LLM-native IDEs was featured in...',
+          description: "",
+          section: "News",},{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
