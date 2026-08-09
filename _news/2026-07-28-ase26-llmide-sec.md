@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Our paper <strong>“Impossible to hide secret ...”: Uncovering Security and Privacy Issues in LLM-native IDEs</strong> has been accepted to ASE 2026.'
+title: "Our paper <strong>“Impossible to hide secret ...”: Uncovering Security and Privacy Issues in LLM-native IDEs</strong> has been accepted to ASE 2026."
 date: 2026-07-28
 inline: false
 related_posts: false

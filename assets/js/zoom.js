@@ -5,7 +5,9 @@ $(document).ready(function () {
   });
 
   // Publication preview full-screen lightbox.
-  var $overlay = $('<div class="pub-preview-overlay"><button class="pub-preview-close" aria-label="Close">&times;</button><img></div>').appendTo("body");
+  var $overlay = $('<div class="pub-preview-overlay"><button class="pub-preview-close" aria-label="Close">&times;</button><img></div>').appendTo(
+    "body"
+  );
   var $overlayImg = $overlay.find("img");
 
   function closeOverlay() {

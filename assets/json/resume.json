@@ -50,11 +50,7 @@
       "startDate": "2026-01-01",
       "endDate": "2026-04-30",
       "summary": "Co-instructing ENSF 380 in Winter 2026 alongside Dr. Ann Barcomb.",
-      "highlights": [
-        "Software Engineering",
-        "Object Oriented Programming",
-        "Database Management Systems"
-      ]
+      "highlights": ["Software Engineering", "Object Oriented Programming", "Database Management Systems"]
     },
     {
       "name": "University of Calgary",
@@ -63,9 +59,7 @@
       "startDate": "2023-09-01",
       "endDate": "-",
       "summary": "Working as a Graduate Assistant in the Department of Electrical & Software Engineering at the University of Calgary.",
-      "highlights": [
-        "NLP, LLM, Software Engineering, AI Trustworthiness"
-      ]
+      "highlights": ["NLP, LLM, Software Engineering, AI Trustworthiness"]
     },
     {
       "name": "IBM Canada",
@@ -74,11 +68,7 @@
       "startDate": "2025-01-01",
       "endDate": "-",
       "summary": "Working as an intern at IBM Canada with Eclipse Openj9 team. My work involves developing AI-powered solutions to assist developers in bug triaging and automated bug deduplication.",
-      "highlights": [
-        "LLM",
-        "Bug Triaging",
-        "Automated Bug Deduplication"
-      ]
+      "highlights": ["LLM", "Bug Triaging", "Automated Bug Deduplication"]
     },
     {
       "name": "Infolytx Bangladesh Limited",
@@ -87,10 +77,7 @@
       "startDate": "2023-01-01",
       "endDate": "2023-08-31",
       "summary": "Worked as a Software Engineer II in the AI/ML team at Infolytx Bangladesh Limited.",
-      "highlights": [
-        "NLP",
-        "Computer Vision"
-      ]
+      "highlights": ["NLP", "Computer Vision"]
     },
     {
       "name": "Infolytx Bangladesh Limited",
@@ -99,10 +86,7 @@
       "startDate": "2022-01-01",
       "endDate": "2022-12-31",
       "summary": "Worked as a Software Engineer I in the AI/ML team at Infolytx Bangladesh Limited.",
-      "highlights": [
-        "NLP",
-        "Computer Vision"
-      ]
+      "highlights": ["NLP", "Computer Vision"]
     },
     {
       "name": "Infolytx Bangladesh Limited",
@@ -111,10 +95,7 @@
       "startDate": "2021-07-01",
       "endDate": "2021-12-31",
       "summary": "Worked as a Jr. Software Engineer in the AI/ML team at Infolytx Bangladesh Limited.",
-      "highlights": [
-        "NLP",
-        "Computer Vision"
-      ]
+      "highlights": ["NLP", "Computer Vision"]
     },
     {
       "name": "ServicEngine Limited",
@@ -123,10 +104,7 @@
       "startDate": "2020-07-01",
       "endDate": "2021-06-30",
       "summary": "Worked as a Software Engineer at ServicEngine Limited.",
-      "highlights": [
-        "Software Development",
-        "Client Interaction"
-      ]
+      "highlights": ["Software Development", "Client Interaction"]
     }
   ],
   "volunteer": [],
@@ -278,6 +256,12 @@
       "keywords": []
     },
     {
+      "name": "Agentic AI",
+      "level": "Expert",
+      "icon": "fa-solid fa-robot",
+      "keywords": []
+    },
+    {
       "name": "Large Language Models",
       "level": "Expert",
       "icon": "fa-solid fa-brain",
@@ -287,12 +271,6 @@
       "name": "Natural Language Processing",
       "level": "Expert",
       "icon": "fa-solid fa-language",
-      "keywords": []
-    },
-    {
-      "name": "AI Agents",
-      "level": "Expert",
-      "icon": "fa-solid fa-robot",
       "keywords": []
     },
     {
@@ -309,12 +287,7 @@
     {
       "name": "Intelligent Issue Analytics Assistant for IBM Runtime Systems",
       "summary": "",
-      "highlights": [
-        "DeBERTa",
-        "RoBERTa",
-        "Pytorch",
-        "Transformers"
-      ],
+      "highlights": ["DeBERTa", "RoBERTa", "Pytorch", "Transformers"],
       "startDate": "2023-09-01",
       "endDate": "",
       "url": "https://casweb.59b0587b.public.multi-containers.ibm.com/ibm/cas/canada/research/1155"
@@ -322,11 +295,7 @@
     {
       "name": "OptiLine™ - Assembly Line Stoppage Solution",
       "summary": "",
-      "highlights": [
-        "PyTorch",
-        "FastAPI",
-        "spaCy"
-      ],
+      "highlights": ["PyTorch", "FastAPI", "spaCy"],
       "startDate": "2023-01",
       "endDate": "2023-07",
       "url": "https://www.infolytx.com/case-study/optiline/?portfolioCats=203#"
@@ -334,12 +303,7 @@
     {
       "name": "TextMiner - Text Analytics Framework",
       "summary": "",
-      "highlights": [
-        "FastAPI",
-        "PyTorch",
-        "Amazon Textract",
-        "spaCy"
-      ],
+      "highlights": ["FastAPI", "PyTorch", "Amazon Textract", "spaCy"],
       "startDate": "2022-01",
       "endDate": "2022-06",
       "url": "https://www.infolytx.com/ai-accelerators/"
@@ -347,11 +311,7 @@
     {
       "name": "BestFit - Candidate Screening System",
       "summary": "",
-      "highlights": [
-        "Spring Boot",
-        "spaCy",
-        "NLTK"
-      ],
+      "highlights": ["Spring Boot", "spaCy", "NLTK"],
       "startDate": "2022-06",
       "endDate": "2022-09",
       "url": "https://www.infolytx.com/products/bestfit-ai-solution/"
@@ -359,11 +319,7 @@
     {
       "name": "Shadhin - Fintech Accelerator",
       "summary": "",
-      "highlights": [
-        "FastAPI",
-        "PyTorch",
-        "spaCy"
-      ],
+      "highlights": ["FastAPI", "PyTorch", "spaCy"],
       "startDate": "2021-09",
       "endDate": "2021-12",
       "url": "https://www.infolytx.com/case-study/case-study-fintech/"
@@ -371,38 +327,10 @@
     {
       "name": "anEye - Undergrad Thesis Project",
       "summary": "",
-      "highlights": [
-        "Tensorflow",
-        "Keras",
-        "OpenCV",
-        "Python"
-      ],
+      "highlights": ["Tensorflow", "Keras", "OpenCV", "Python"],
       "startDate": "2018",
       "endDate": "2020",
       "url": "https://sites.google.com/view/a-Eye"
-    },
-    {
-      "name": "Bangla Music Genre Classifier",
-      "summary": "",
-      "highlights": [
-        "Tensorflow",
-        "Keras",
-        "Python"
-      ],
-      "startDate": "2019",
-      "endDate": "2019",
-      "url": "https://github.com/afifaniks/BanglaMusicGenreClassification"
-    },
-    {
-      "name": "Inventory Management System",
-      "summary": "",
-      "highlights": [
-        "JavaFX",
-        "MySQL"
-      ],
-      "startDate": "2018",
-      "endDate": "2018",
-      "url": "https://github.com/afifaniks/InventorySystem"
     }
   ],
   "certificates": [

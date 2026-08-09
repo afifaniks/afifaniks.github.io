@@ -13,6 +13,7 @@ nav: false # surfaced via the "more" dropdown (_pages/dropdown.md), not as a top
 <div class="marginalia">
 
 {% if fav.books and fav.books.size > 0 %}
+
 <section class="fav-section">
   <h2 class="fav-section-title"><span class="fav-section-icon">📚</span>Books that stuck with me</h2>
   {% if fav.books.size > 10 %}<input type="checkbox" id="books-toggle" class="fav-toggle-cb" hidden>{% endif %}
@@ -42,6 +43,7 @@ nav: false # surfaced via the "more" dropdown (_pages/dropdown.md), not as a top
 {% endif %}
 
 {% if fav.papers and fav.papers.size > 0 %}
+
 <section class="fav-section">
   <h2 class="fav-section-title"><span class="fav-section-icon">📄</span>Papers worth revisiting</h2>
   <ul class="fav-papers">
@@ -56,6 +58,7 @@ nav: false # surfaced via the "more" dropdown (_pages/dropdown.md), not as a top
 {% endif %}
 
 {% if fav.movies and fav.movies.size > 0 %}
+
 <section class="fav-section">
   <h2 class="fav-section-title"><span class="fav-section-icon">🎬</span>Films I could rewatch forever</h2>
   <div class="fav-movies fav-shelf">
@@ -77,6 +80,7 @@ nav: false # surfaced via the "more" dropdown (_pages/dropdown.md), not as a top
 {% endif %}
 
 {% if fav.songs and fav.songs.size > 0 %}
+
 <section class="fav-section">
   <h2 class="fav-section-title"><span class="fav-section-icon">🎧</span>Here's a mixtape of what I like</h2>
   <div class="fav-songs">
@@ -99,6 +103,7 @@ nav: false # surfaced via the "more" dropdown (_pages/dropdown.md), not as a top
 {% endif %}
 
 {% if fav.quotes and fav.quotes.size > 0 %}
+
 <section class="fav-section">
   <h2 class="fav-section-title"><span class="fav-section-icon">❝</span>Lines I keep coming back to</h2>
   <div class="fav-quotes">
