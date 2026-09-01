@@ -27,7 +27,11 @@ nav_order: 5
 <ul>
   <li>
     <strong>ENEL 500:</strong> Computer, Electrical, and Software Engineering Team Design<br>
-    <small class="text-muted">Fall 2025, Winter 2026</small>
+    <small class="text-muted">Fall 2025–Winter 2026, Fall 2026–Winter 2027</small>
+  </li>
+  <li>
+    <strong>ENSF 608</strong> Databases<br>
+    <small class="text-muted">Fall 2026</small>
   </li>
   <li>
     <strong>SENG 401:</strong> Software Architecture<br>
