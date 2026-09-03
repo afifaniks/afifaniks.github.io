@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: PhD Student
+subtitle: PhD Candidate
 
 profile:
   align: right
@@ -15,7 +15,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I'm Afif, a PhD student at the University of Calgary researching how AI agents can become better teammates for developers by helping them find, understand, and fix software bugs.
+I'm Afif, a PhD candidate at the University of Calgary researching how AI agents can become better teammates for developers by helping them find, understand, and fix software bugs.
 
 My work focuses on automating software bug management, spanning bug triaging, localization, and root cause analysis through intelligent LLM-based agents. Alongside my research, I collaborate with IBM Canada through Mitacs and contribute to the software engineering community through peer review for journals including TOSEM and EMSE.
 
