@@ -183,7 +183,12 @@ ninja.data = [{
             },},{id: "news-our-paper-on-security-and-privacy-issues-in-llm-native-ides-was-featured-in-news-read-more-on-the-register-devs-to-anthropic-openai-cursor-and-friends-make-security-and-privacy-the-default",
           title: 'Our paper on security and privacy issues in LLM-native IDEs was featured in...',
           description: "",
-          section: "News",},{
+          section: "News",},{id: "news-stack-trace-based-crash-deduplication-with-transformer-adaptation-has-been-accepted-to-ieee-transactions-on-software-engineering-tse",
+          title: 'Stack Trace-Based Crash Deduplication with Transformer Adaptation has been accepted to IEEE Transactions...',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/dedupt/";
+            },},{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
