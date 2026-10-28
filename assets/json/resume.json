@@ -114,9 +114,20 @@
       "location": "Calgary, Alberta",
       "url": "https://www.ucalgary.ca/",
       "area": "Software Engineering",
-      "studyType": "Doctor of Philosophy",
-      "startDate": "2023-09-01",
+      "studyType": "Doctor of Philosophy (Fast-tracked)",
+      "startDate": "2025-05-01",
       "endDate": "Present",
+      "score": "",
+      "courses": []
+    },
+    {
+      "institution": "University of Calgary",
+      "location": "Calgary, Alberta",
+      "url": "https://www.ucalgary.ca/",
+      "area": "Software Engineering",
+      "studyType": "Master of Science",
+      "startDate": "2023-09-01",
+      "endDate": "2025-04-30",
       "score": "",
       "courses": []
     },
