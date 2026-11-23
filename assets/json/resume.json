@@ -230,6 +230,13 @@
     }
   ],
   "services": [
+      {
+      "role": "Program Committee Member",
+      "date": "2027",
+      "organization": "1st International Workshop on Infrastructure for Trustworthy Software Agents (AgentVerify 2027)",
+      "url": "https://agentverify2027.github.io/",
+      "summary": "Program Committee Member, co-located with ICSE 2027 in Dublin, Ireland."
+    },
     {
       "role": "Web Co-Chair",
       "date": "2027",
